@@ -27,7 +27,7 @@ namespace DoAn.Areas.Admin.Controllers
         }
 
         // GET: Admin/DienThoai/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -35,7 +35,7 @@ namespace DoAn.Areas.Admin.Controllers
             }
 
             var dienThoaiModel = await _context.DienThoai
-                .FirstOrDefaultAsync(m => m.MaDongDT == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (dienThoaiModel == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaDongDT,MaLoai,MaHangSX,MaNCC,TenDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel)
+        public async Task<IActionResult> Create([Bind("ID,MaDongDT,MaLoai,TenDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace DoAn.Areas.Admin.Controllers
         }
 
         // GET: Admin/DienThoai/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -87,9 +87,9 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaDongDT,MaLoai,MaHangSX,MaNCC,TenDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,MaDongDT,MaLoai,TenDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel)
         {
-            if (id != dienThoaiModel.MaDongDT)
+            if (id != dienThoaiModel.ID)
             {
                 return NotFound();
             }
@@ -103,7 +103,7 @@ namespace DoAn.Areas.Admin.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DienThoaiModelExists(dienThoaiModel.MaDongDT))
+                    if (!DienThoaiModelExists(dienThoaiModel.ID))
                     {
                         return NotFound();
                     }
@@ -118,7 +118,7 @@ namespace DoAn.Areas.Admin.Controllers
         }
 
         // GET: Admin/DienThoai/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -126,7 +126,7 @@ namespace DoAn.Areas.Admin.Controllers
             }
 
             var dienThoaiModel = await _context.DienThoai
-                .FirstOrDefaultAsync(m => m.MaDongDT == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (dienThoaiModel == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace DoAn.Areas.Admin.Controllers
         // POST: Admin/DienThoai/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var dienThoaiModel = await _context.DienThoai.FindAsync(id);
             _context.DienThoai.Remove(dienThoaiModel);
@@ -146,9 +146,9 @@ namespace DoAn.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DienThoaiModelExists(string id)
+        private bool DienThoaiModelExists(int id)
         {
-            return _context.DienThoai.Any(e => e.MaDongDT == id);
+            return _context.DienThoai.Any(e => e.ID == id);
         }
     }
 }

@@ -10,44 +10,43 @@ namespace DoAn.Migrations
                 name: "DongDienThoai",
                 columns: table => new
                 {
-                    IMEI = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    MaDongDT = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MauSac = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    MaDT = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    TenDongDT = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DongDienThoai", x => x.IMEI);
+                    table.PrimaryKey("PK_DongDienThoai", x => x.MaDT);
                 });
 
             migrationBuilder.CreateTable(
                 name: "DienThoai",
                 columns: table => new
                 {
-                    MaDongDT = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MaDongDT = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MaLoai = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MaHangSX = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MaNCC = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TenDongDT = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Hinh = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DonGia = table.Column<float>(type: "real", nullable: false),
                     GiaKM = table.Column<float>(type: "real", nullable: false),
-                    DongDienThoaiIMEI = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    DongDTMaDT = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DienThoai", x => x.MaDongDT);
+                    table.PrimaryKey("PK_DienThoai", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_DienThoai_DongDienThoai_DongDienThoaiIMEI",
-                        column: x => x.DongDienThoaiIMEI,
+                        name: "FK_DienThoai_DongDienThoai_DongDTMaDT",
+                        column: x => x.DongDTMaDT,
                         principalTable: "DongDienThoai",
-                        principalColumn: "IMEI",
+                        principalColumn: "MaDT",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_DienThoai_DongDienThoaiIMEI",
+                name: "IX_DienThoai_DongDTMaDT",
                 table: "DienThoai",
-                column: "DongDienThoaiIMEI");
+                column: "DongDTMaDT");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

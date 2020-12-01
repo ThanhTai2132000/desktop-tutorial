@@ -20,13 +20,15 @@ namespace DoAn.Migrations
 
             modelBuilder.Entity("DoAn.Areas.Admin.Models.DienThoaiModel", b =>
                 {
-                    b.Property<string>("MaDongDT")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<float>("DonGia")
                         .HasColumnType("real");
 
-                    b.Property<string>("DongDienThoaiIMEI")
+                    b.Property<string>("DongDTMaDT")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<float>("GiaKM")
@@ -35,48 +37,42 @@ namespace DoAn.Migrations
                     b.Property<string>("Hinh")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MaHangSX")
+                    b.Property<string>("MaDongDT")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MaLoai")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MaNCC")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TenDongDT")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("MaDongDT");
+                    b.HasKey("ID");
 
-                    b.HasIndex("DongDienThoaiIMEI");
+                    b.HasIndex("DongDTMaDT");
 
                     b.ToTable("DienThoai");
                 });
 
             modelBuilder.Entity("DoAn.Areas.Admin.Models.DongDienThoaiModel", b =>
                 {
-                    b.Property<string>("IMEI")
+                    b.Property<string>("MaDT")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("MaDongDT")
+                    b.Property<string>("TenDongDT")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MauSac")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IMEI");
+                    b.HasKey("MaDT");
 
                     b.ToTable("DongDienThoai");
                 });
 
             modelBuilder.Entity("DoAn.Areas.Admin.Models.DienThoaiModel", b =>
                 {
-                    b.HasOne("DoAn.Areas.Admin.Models.DongDienThoaiModel", "DongDienThoai")
+                    b.HasOne("DoAn.Areas.Admin.Models.DongDienThoaiModel", "DongDT")
                         .WithMany("listDienThoai")
-                        .HasForeignKey("DongDienThoaiIMEI");
+                        .HasForeignKey("DongDTMaDT");
 
-                    b.Navigation("DongDienThoai");
+                    b.Navigation("DongDT");
                 });
 
             modelBuilder.Entity("DoAn.Areas.Admin.Models.DongDienThoaiModel", b =>
