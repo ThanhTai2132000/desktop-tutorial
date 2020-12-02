@@ -11,7 +11,7 @@ namespace DoAn.Areas.Admin.Data
         public DPContext(DbContextOptions<DPContext> options) : base(options) {}
         public DbSet<Models.DienThoaiModel> DienThoai { get; set; }
         public DbSet<Models.DongDienThoaiModel> DongDienThoai { get; set; }
-        public DbSet<Models.HoaDonModel> HoaDong { get; set; }
+        public DbSet<Models.HoaDonModel> HoaDon { get; set; }
         public DbSet<Models.ChiTietHoaDonModel> ChiTietHoaDon { get; set; }
 
     }

@@ -6,43 +6,34 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DoAn.Models;
+using DoAn.Areas.Admin.Data;
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly DPContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(DPContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Cart()
+        public IActionResult List()
         {
-            return View();
+            var list = from m in _context.DienThoai select m;
+            return View(list.ToList());
         }
-        public IActionResult Checkout()
+        public IActionResult Grid()
         {
-            return View();
+            var list = from m in _context.DienThoai select m;
+            return View(list.ToList());
         }
-        public IActionResult Shop()
-        {
-            return View();
-        }
-        public IActionResult SingleProduct()
-        {
-            return View();
-        }
-        public IActionResult Login()
-        {
-            return View();
-        }
-        public IActionResult Registration()
+        public IActionResult Details()
         {
             return View();
         }

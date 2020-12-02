@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Nam3-HK1\\ASP.NET\\DoAn\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj": {}
+    "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj": {}
   },
   "projects": {
-    "D:\\Nam3-HK1\\ASP.NET\\DoAn\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj": {
+    "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Nam3-HK1\\ASP.NET\\DoAn\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+        "projectUniqueName": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
         "projectName": "DoAn",
-        "projectPath": "D:\\Nam3-HK1\\ASP.NET\\DoAn\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+        "projectPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
         "packagesPath": "C:\\Users\\lehuu\\.nuget\\packages\\",
-        "outputPath": "D:\\Nam3-HK1\\ASP.NET\\DoAn\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\",
+        "outputPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lehuu\\AppData\\Roaming\\NuGet\\NuGet.Config",

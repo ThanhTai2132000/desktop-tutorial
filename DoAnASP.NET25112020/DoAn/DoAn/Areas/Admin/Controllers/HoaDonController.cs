@@ -23,7 +23,7 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/HoaDon
         public async Task<IActionResult> Index()
         {
-            return View(await _context.HoaDong.ToListAsync());
+            return View(await _context.HoaDon.ToListAsync());
         }
 
         // GET: Admin/HoaDon/Details/5
@@ -34,7 +34,7 @@ namespace DoAn.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var hoaDonModel = await _context.HoaDong
+            var hoaDonModel = await _context.HoaDon
                 .FirstOrDefaultAsync(m => m.MaHD == id);
             if (hoaDonModel == null)
             {
@@ -74,7 +74,7 @@ namespace DoAn.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var hoaDonModel = await _context.HoaDong.FindAsync(id);
+            var hoaDonModel = await _context.HoaDon.FindAsync(id);
             if (hoaDonModel == null)
             {
                 return NotFound();
@@ -125,7 +125,7 @@ namespace DoAn.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var hoaDonModel = await _context.HoaDong
+            var hoaDonModel = await _context.HoaDon
                 .FirstOrDefaultAsync(m => m.MaHD == id);
             if (hoaDonModel == null)
             {
@@ -140,15 +140,15 @@ namespace DoAn.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var hoaDonModel = await _context.HoaDong.FindAsync(id);
-            _context.HoaDong.Remove(hoaDonModel);
+            var hoaDonModel = await _context.HoaDon.FindAsync(id);
+            _context.HoaDon.Remove(hoaDonModel);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool HoaDonModelExists(string id)
         {
-            return _context.HoaDong.Any(e => e.MaHD == id);
+            return _context.HoaDon.Any(e => e.MaHD == id);
         }
     }
 }
