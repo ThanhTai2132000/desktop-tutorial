@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DoAn.Areas.Admin.Data;
 using DoAn.Areas.Admin.Models;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace DoAn.Areas.Admin.Controllers
 {
@@ -55,11 +57,19 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,MaDongDT,MaLoai,TenDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel)
+        public async Task<IActionResult> Create([Bind("ID,MaDongDT,MaLoai,TenDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel , IFormFile ful)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(dienThoaiModel);
+                await _context.SaveChangesAsync();
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/pro", dienThoaiModel.ID + "." + ful.FileName.Split(".")[ful.FileName.Split(".").Length - 1]);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await ful.CopyToAsync(stream);
+                }
+                dienThoaiModel.Hinh = dienThoaiModel.ID + "." + ful.FileName.Split(".")[ful.FileName.Split(".").Length - 1];
+                _context.Update(dienThoaiModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

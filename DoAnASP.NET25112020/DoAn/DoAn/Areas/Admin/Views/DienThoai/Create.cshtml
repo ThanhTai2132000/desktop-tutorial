@@ -12,6 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="MaDongDT" class="control-label"></label>
                 <input asp-for="MaDongDT" class="form-control" />
@@ -27,10 +28,12 @@
                 <input asp-for="TenDongDT" class="form-control" />
                 <span asp-validation-for="TenDongDT" class="text-danger"></span>
             </div>
+            <div class="custom-file">
+                <input accept="*.png|*.jpeg|*.jpg" type="file" class="custom-file-input" id="ful" name="ful" />
+                <label class="custom-file-label" for="ful">Chon Hinh</label>
+            </div>
             <div class="form-group">
-                <label asp-for="Hinh" class="control-label"></label>
-                <input asp-for="Hinh" class="form-control" />
-                <span asp-validation-for="Hinh" class="text-danger"></span>
+                <img id="ImgPre" src="~/img/noimg.jpg" alt="noimage" class="img-thumbnail" />
             </div>
             <div class="form-group">
                 <label asp-for="DonGia" class="control-label"></label>
@@ -55,4 +58,22 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+        function readURL(input, idImg) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $(idImg).attr("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+
+        }
+        $("#ful").change(function () {
+            readURL(this, "#ImgPre");
+        });
+
+    </script>
 }
