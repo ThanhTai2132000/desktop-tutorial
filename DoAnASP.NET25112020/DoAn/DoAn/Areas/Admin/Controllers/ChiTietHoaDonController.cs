@@ -55,7 +55,7 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,MaHoaDon,TenDienThoai,SoLuong,DonGia,GiaKhuyenMai")] ChiTietHoaDonModel chiTietHoaDonModel)
+        public async Task<IActionResult> Create([Bind("ID,MaHoaDon,IDDienThoai,SoLuong,DonGia,GiaKhuyenMai")] ChiTietHoaDonModel chiTietHoaDonModel)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,MaHoaDon,TenDienThoai,SoLuong,DonGia,GiaKhuyenMai")] ChiTietHoaDonModel chiTietHoaDonModel)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,MaHoaDon,IDDienThoai,SoLuong,DonGia,GiaKhuyenMai")] ChiTietHoaDonModel chiTietHoaDonModel)
         {
             if (id != chiTietHoaDonModel.ID)
             {

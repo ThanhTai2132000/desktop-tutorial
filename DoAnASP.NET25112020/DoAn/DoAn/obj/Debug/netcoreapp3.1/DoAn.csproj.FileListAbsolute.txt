@@ -683,16 +683,6 @@ D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcorea
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.TagHelpers.input.cache
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.TagHelpers.output.cache
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.RazorCoreGenerate.cache
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Create.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Delete.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Details.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Edit.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Index.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Create.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Delete.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Details.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Edit.cshtml.g.cs
-D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Index.cshtml.g.cs
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DongDienThoai\Create.cshtml.g.cs
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DongDienThoai\Delete.cshtml.g.cs
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DongDienThoai\Details.cshtml.g.cs
@@ -730,3 +720,8 @@ D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcorea
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.dll
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.pdb
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.genruntimeconfig.cache
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Create.cshtml.g.cs
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Delete.cshtml.g.cs
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Details.cshtml.g.cs
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Edit.cshtml.g.cs
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Index.cshtml.g.cs
