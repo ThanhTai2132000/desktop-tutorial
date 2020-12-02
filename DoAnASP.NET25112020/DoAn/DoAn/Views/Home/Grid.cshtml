@@ -1,4 +1,5 @@
-﻿<!--begin content-->
+﻿@model List<DoAn.Areas.Admin.Models.DienThoaiModel>
+<!--begin content-->
 <div class="content">
     <div class="breadcrumbs">
         <div class="container">
@@ -133,8 +134,8 @@
                                 Clear all
                             </a>
                             @*<a class="go-compare" href="#">
-                                COMPARE
-                            </a>*@
+                                    COMPARE
+                                </a>*@
                         </div>
 
                     </div>
@@ -242,48 +243,55 @@
                                 </div>
                             </div>
                             <ul class="products-grid row">
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo1.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
+
+                                @foreach (var item in Model)
+                                {
+
+                                    <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
+                                        <div class="item-wrap">
+                                            <div class="item-image">
+                                                <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
+                                                    <img class="first_image" src="~/ImgDienThoai/@Html.DisplayFor(modelItem => item.Hinh)" alt="Product demo" />
+                                                </a>
+                                                <div class="item-btn">
+                                                    <div class="box-inner">
+                                                        <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
+                                                        <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
+                                                        <span class="qview">
+                                                            <a href="detail.html"></a>
+                                                            <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
+                                                        </span>
                                                     </div>
                                                 </div>
+                                                <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
+                                            </div>
+                                            <div class="pro-info">
+                                                <div class="pro-inner">
+                                                    <div class="pro-title product-name"><a href="detail.html">@Html.DisplayFor(modelItem => item.TenDT)</a></div>
+                                                    <div class="pro-content">
+                                                        <div class="wrap-price">
+                                                            <div class="price-box">
+                                                                <span class="regular-price">
+                                                                    <span class="price">@Html.DisplayFor(modelItem => item.DonGia)</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ratings">
+                                                            <div class="rating-box">
+                                                                <div class="rating" style="width:80%"></div>
+                                                            </div>
+                                                            <span class="amount"><a href="detail.html">1(s)</a></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
+                                        <!--end item wrap -->
+                                    </li>
+
+                                }
+
+                                <!--<li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
                                             <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
@@ -321,9 +329,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -362,9 +370,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -403,9 +411,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -444,9 +452,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -485,9 +493,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -526,9 +534,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -567,9 +575,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -608,9 +616,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -649,9 +657,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -690,9 +698,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -731,9 +739,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -772,9 +780,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -813,9 +821,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -854,9 +862,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -895,9 +903,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -936,9 +944,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -977,9 +985,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -1018,9 +1026,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>
                                 <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
                                     <div class="item-wrap">
                                         <div class="item-image">
@@ -1059,9 +1067,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--end item wrap -->
-                                </li>
+                                    </div>-->
+                                <!--end item wrap -->
+                                <!--</li>-->
                             </ul>
                             <div class="toolbar-bottom">
                                 <div class="toolbar">

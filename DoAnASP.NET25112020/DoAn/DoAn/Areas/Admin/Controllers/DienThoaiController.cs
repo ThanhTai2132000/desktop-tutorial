@@ -23,7 +23,8 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai
         public async Task<IActionResult> Index()
         {
-            return View(await _context.DienThoai.ToListAsync());
+            var dPContext = _context.DienThoai.Include(d => d.DongDT);
+            return View(await dPContext.ToListAsync());
         }
 
         // GET: Admin/DienThoai/Details/5
@@ -35,6 +36,7 @@ namespace DoAn.Areas.Admin.Controllers
             }
 
             var dienThoaiModel = await _context.DienThoai
+                .Include(d => d.DongDT)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (dienThoaiModel == null)
             {
@@ -47,6 +49,7 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai/Create
         public IActionResult Create()
         {
+            ViewData["MaDongDT"] = new SelectList(_context.DongDienThoai, "MaDT", "MaDT");
             return View();
         }
 
@@ -63,6 +66,7 @@ namespace DoAn.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaDongDT"] = new SelectList(_context.DongDienThoai, "MaDT", "MaDT", dienThoaiModel.MaDongDT);
             return View(dienThoaiModel);
         }
 
@@ -79,6 +83,7 @@ namespace DoAn.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewData["MaDongDT"] = new SelectList(_context.DongDienThoai, "MaDT", "MaDT", dienThoaiModel.MaDongDT);
             return View(dienThoaiModel);
         }
 
@@ -114,6 +119,7 @@ namespace DoAn.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaDongDT"] = new SelectList(_context.DongDienThoai, "MaDT", "MaDT", dienThoaiModel.MaDongDT);
             return View(dienThoaiModel);
         }
 
@@ -126,6 +132,7 @@ namespace DoAn.Areas.Admin.Controllers
             }
 
             var dienThoaiModel = await _context.DienThoai
+                .Include(d => d.DongDT)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (dienThoaiModel == null)
             {

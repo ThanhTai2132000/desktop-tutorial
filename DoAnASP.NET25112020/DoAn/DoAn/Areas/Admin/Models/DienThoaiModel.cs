@@ -14,10 +14,11 @@ namespace DoAn.Areas.Admin.Models
         public string TenDT { get; set; }
         public string MaDongDT { get; set; }
         [ForeignKey("MaDongDT")]
+        public virtual DongDienThoaiModel DongDT { get; set; }
         public string Hinh { get; set; }
         public float DonGia { get; set; }
         public float GiaKM { get; set; }
-        public virtual DongDienThoaiModel DongDT { get; set; }
+        
         public ICollection<ChiTietHoaDonModel> listDTCoHoaDon { get; set; }
     }
 }
