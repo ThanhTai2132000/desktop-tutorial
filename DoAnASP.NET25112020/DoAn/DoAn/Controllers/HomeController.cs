@@ -22,27 +22,15 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Cart()
+        public IActionResult List()
         {
             return View();
         }
-        public IActionResult Checkout()
+        public IActionResult Grid()
         {
             return View();
         }
-        public IActionResult Shop()
-        {
-            return View();
-        }
-        public IActionResult SingleProduct()
-        {
-            return View();
-        }
-        public IActionResult Login()
-        {
-            return View();
-        }
-        public IActionResult Registration()
+        public IActionResult Details()
         {
             return View();
         }

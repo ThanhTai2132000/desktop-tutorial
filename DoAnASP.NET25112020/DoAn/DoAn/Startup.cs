@@ -57,7 +57,7 @@ namespace DoAn
                    pattern: "{area:exists}/{controller=DongDienThoai}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Details}/{id?}");
             });
         }
     }
