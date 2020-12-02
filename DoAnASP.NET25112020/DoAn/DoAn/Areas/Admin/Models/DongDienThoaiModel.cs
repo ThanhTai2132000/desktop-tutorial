@@ -9,9 +9,8 @@ namespace DoAn.Areas.Admin.Models
     public class DongDienThoaiModel
     {
         [Key]
-        public string IMEI { get; set; }
-        public string MaDongDT { get; set; }
-        public string MauSac { get; set; }
+        public string MaDT { get; set; }
+        public string TenDongDT { get; set; }
         public ICollection<DienThoaiModel> listDienThoai { get; set; }
 
     }

@@ -11,28 +11,16 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaLoai)
+            @Html.DisplayNameFor(model => model.TenDT)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaLoai)
+            @Html.DisplayFor(model => model.TenDT)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaHangSX)
+            @Html.DisplayNameFor(model => model.MaDongDT)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaHangSX)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaNCC)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaNCC)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TenDongDT)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TenDongDT)
+            @Html.DisplayFor(model => model.MaDongDT)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Hinh)
@@ -55,6 +43,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.MaDongDT">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
