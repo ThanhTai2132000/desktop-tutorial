@@ -25,11 +25,13 @@ namespace WebApplication1.Controllers
         }
         public IActionResult List()
         {
-            return View();
+            var list = from m in _context.DienThoai select m;
+            return View(list.ToList());
         }
         public IActionResult Grid()
         {
-            return View();
+            var list = from m in _context.DienThoai select m;
+            return View(list.ToList());
         }
         public IActionResult Details()
         {
