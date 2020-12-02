@@ -12,26 +12,16 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="MaDongDT" />
+            <input type="hidden" asp-for="ID" />
             <div class="form-group">
-                <label asp-for="MaLoai" class="control-label"></label>
-                <input asp-for="MaLoai" class="form-control" />
-                <span asp-validation-for="MaLoai" class="text-danger"></span>
+                <label asp-for="TenDT" class="control-label"></label>
+                <input asp-for="TenDT" class="form-control" />
+                <span asp-validation-for="TenDT" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MaHangSX" class="control-label"></label>
-                <input asp-for="MaHangSX" class="form-control" />
-                <span asp-validation-for="MaHangSX" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MaNCC" class="control-label"></label>
-                <input asp-for="MaNCC" class="form-control" />
-                <span asp-validation-for="MaNCC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TenDongDT" class="control-label"></label>
-                <input asp-for="TenDongDT" class="form-control" />
-                <span asp-validation-for="TenDongDT" class="text-danger"></span>
+                <label asp-for="MaDongDT" class="control-label"></label>
+                <input asp-for="MaDongDT" class="form-control" />
+                <span asp-validation-for="MaDongDT" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Hinh" class="control-label"></label>

@@ -12,28 +12,16 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaLoai)
+            @Html.DisplayNameFor(model => model.TenDT)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaLoai)
+            @Html.DisplayFor(model => model.TenDT)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaHangSX)
+            @Html.DisplayNameFor(model => model.MaDongDT)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaHangSX)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaNCC)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaNCC)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TenDongDT)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TenDongDT)
+            @Html.DisplayFor(model => model.MaDongDT)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Hinh)
@@ -56,7 +44,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="MaDongDT" />
+        <input type="hidden" asp-for="ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

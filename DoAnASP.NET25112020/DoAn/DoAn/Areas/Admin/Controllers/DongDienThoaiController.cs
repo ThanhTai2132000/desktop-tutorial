@@ -35,7 +35,7 @@ namespace DoAn.Areas.Admin.Controllers
             }
 
             var dongDienThoaiModel = await _context.DongDienThoai
-                .FirstOrDefaultAsync(m => m.IMEI == id);
+                .FirstOrDefaultAsync(m => m.MaDT == id);
             if (dongDienThoaiModel == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IMEI,MaDongDT,MauSac")] DongDienThoaiModel dongDienThoaiModel)
+        public async Task<IActionResult> Create([Bind("MaDT,TenDongDT")] DongDienThoaiModel dongDienThoaiModel)
         {
             if (ModelState.IsValid)
             {
@@ -87,9 +87,9 @@ namespace DoAn.Areas.Admin.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("IMEI,MaDongDT,MauSac")] DongDienThoaiModel dongDienThoaiModel)
+        public async Task<IActionResult> Edit(string id, [Bind("MaDT,TenDongDT")] DongDienThoaiModel dongDienThoaiModel)
         {
-            if (id != dongDienThoaiModel.IMEI)
+            if (id != dongDienThoaiModel.MaDT)
             {
                 return NotFound();
             }
@@ -103,7 +103,7 @@ namespace DoAn.Areas.Admin.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DongDienThoaiModelExists(dongDienThoaiModel.IMEI))
+                    if (!DongDienThoaiModelExists(dongDienThoaiModel.MaDT))
                     {
                         return NotFound();
                     }
@@ -126,7 +126,7 @@ namespace DoAn.Areas.Admin.Controllers
             }
 
             var dongDienThoaiModel = await _context.DongDienThoai
-                .FirstOrDefaultAsync(m => m.IMEI == id);
+                .FirstOrDefaultAsync(m => m.MaDT == id);
             if (dongDienThoaiModel == null)
             {
                 return NotFound();
@@ -148,7 +148,7 @@ namespace DoAn.Areas.Admin.Controllers
 
         private bool DongDienThoaiModelExists(string id)
         {
-            return _context.DongDienThoai.Any(e => e.IMEI == id);
+            return _context.DongDienThoai.Any(e => e.MaDT == id);
         }
     }
 }
