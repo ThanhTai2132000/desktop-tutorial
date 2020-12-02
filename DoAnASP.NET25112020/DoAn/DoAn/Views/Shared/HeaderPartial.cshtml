@@ -7,13 +7,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="logo">
-                                <a href="home-01.html"><img src="~/template/images/logodefault.png" alt="" /></a>
+                                <a href="#"><img src="~/template/images/logodefault.png" alt="" /></a>
                             </div>
                             <div class="menu">
                                 <div class="box-main-menu">
                                     <div class="main-menu">
                                         <ul>
-                                            <li class="item1 first"><a href="home-01.html">Home</a></li>
+                                            <li class="item1 first">@Html.ActionLink("HOME", "Index", "Home")</li>
                                             <li class="item2 megamenu-parent">
                                                 <a href="grid.html">Tablets</a>
                                                 <div class="vt_megamenu_content">
@@ -84,7 +84,7 @@
                                                 </div>
                                             </li>
                                             <li class="item3 megamenu-parent">
-                                                <a href="grid.html">smart phone</a>
+                                                @Html.ActionLink("DANH SÁCH","Grid","Home")
                                                 <div class="vt_megamenu_content">
                                                     <div class="mega-menu-02">
                                                         <h1 class="title">MOST POPULAR</h1>
@@ -383,10 +383,7 @@
                                                 </div>
 
                                             </li>
-                                            <li class="item4"><a href="grid.html">laptops </a></li>
-                                            <li class="item5"><a href="grid.html">Desktops</a></li>
-                                            <li class="item6"><a href="#">Computer Accessories</a></li>
-                                            <li class="item7 last"><a href="grid.html">Cameras & Photo</a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
