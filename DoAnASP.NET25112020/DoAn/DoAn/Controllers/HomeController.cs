@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DoAn.Models;
 using DoAn.Areas.Admin.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication1.Controllers
 {
@@ -33,9 +34,22 @@ namespace WebApplication1.Controllers
             var list = from m in _context.DienThoai select m;
             return View(list.ToList());
         }
-        public IActionResult Details()
+        public  async Task <IActionResult> Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var dienThoaiModel = await _context.DienThoai
+                .Include(d => d.DongDT)
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (dienThoaiModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(dienThoaiModel);
         }
         public IActionResult Privacy()
         {
