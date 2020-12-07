@@ -166,9 +166,9 @@
                             <a class="btn-clear" href="#">
                                 Clear all
                             </a>
-                            <a class="go-compare" href="#">
+                            @*<a class="go-compare" href="#">
                                 COMPARE
-                            </a>
+                            </a>*@
                         </div>
 
                     </div>
@@ -290,7 +290,6 @@
                                             </p>
                                         </div>
                                     </div>
-                                    </div>
                                     <!--<div class="product-code"><label>Product code:</label></div>-->
                                     <div class="short-description">
                                         <div class="std">
@@ -375,9 +374,9 @@
                                 <span class='st_linkedin_large' displayText='LinkedIn'></span>
                                 <span class='st_pinterest_large' displayText='Pinterest'></span>
                                 <span class='st_email_large' displayText='Email'></span>
-                                <script type="text/javascript">var switchTo5x=true;</script>
+                                <script type="text/javascript">var switchTo5x = true;</script>
                                 <script type="text/javascript" src="~/template/http://w.sharethis.com/button/buttons.js"></script>
-                                <script type="text/javascript">stLight.options({publisher: "6d56a077-95db-44a6-a019-d5a901534fea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+                                <script type="text/javascript">stLight.options({ publisher: "6d56a077-95db-44a6-a019-d5a901534fea", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
                             </div>
                         </div>
                         <div class="tab-detail">
@@ -454,7 +453,12 @@
                                                 <h4>How do you rate this product? <em class="required">*</em></h4>
                                                 <span id="input-message-box"></span>
                                                 <table class="data-table review-summary-table ratings" id="product-review-table">
-                                                   
+                                                    <col width="1" />
+                                                    <col />
+                                                    <col />
+                                                    <col />
+                                                    <col />
+                                                    <col />
                                                     <thead>
                                                         <tr>
                                                             <th>&nbsp;</th>
@@ -544,14 +548,12 @@
                                 <div id="menu3" class="tab-pane fade">
                                     <h3>Product Tags</h3>
                                     <p>Add Your Tags:</p>
-
-                                    <form action="" method="get">
+                                    <form action="" menthod="get">
                                         <input type="text" nam="tags" />
                                         <button><span>Add tags</span></button>
                                     </form>
-
                                 </div>
-                                <div id="menu4"  class="tab-pane fade">
+                                <div id="menu4" class="tab-pane fade">
                                     <p>This is custom tab in static block.</p>
                                 </div>
                             </div>
@@ -777,7 +779,7 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+
 
                     </div>
 
@@ -785,5 +787,5 @@
             </div>
         </div>
     </div>
-
+</div>
 <!--end content-->

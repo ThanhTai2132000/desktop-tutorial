@@ -730,3 +730,13 @@ D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcorea
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Details.cshtml.g.cs
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Edit.cshtml.g.cs
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DienThoai\Index.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Create.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Delete.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Details.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Edit.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ChiTietHoaDon\Index.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\HoaDon\Create.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\HoaDon\Delete.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\HoaDon\Details.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\HoaDon\Edit.cshtml.g.cs
+C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\HoaDon\Index.cshtml.g.cs

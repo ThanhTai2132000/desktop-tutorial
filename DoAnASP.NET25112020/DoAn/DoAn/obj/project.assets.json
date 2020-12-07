@@ -8947,20 +8947,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lehuu\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
       "projectName": "DoAn",
-      "projectPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
-      "packagesPath": "C:\\Users\\lehuu\\.nuget\\packages\\",
-      "outputPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lehuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9024,16 +9029,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
