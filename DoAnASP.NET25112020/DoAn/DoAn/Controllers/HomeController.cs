@@ -24,14 +24,18 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult List()
+        public IActionResult List(string? id)
         {
+            ViewBag.DongDienThoai = _context.DongDienThoai.ToList();
             var list = from m in _context.DienThoai select m;
+            if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
             return View(list.ToList());
         }
-        public IActionResult Grid()
+        public IActionResult Grid(string? id)
         {
+            ViewBag.DongDienThoai = _context.DongDienThoai.ToList();
             var list = from m in _context.DienThoai select m;
+            if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
             return View(list.ToList());
         }
         public  async Task <IActionResult> Details(int? id)
