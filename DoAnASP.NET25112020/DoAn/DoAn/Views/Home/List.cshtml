@@ -24,43 +24,21 @@
                         <div class="block-title">
                             <strong><span>Mobile</span></strong>
                         </div>
-                        <div class="block-content">
-                            <dl id="narrow-by-list">
-                                <dt id="tab1" class="tab-accordion accordion-close">Apple</dt>
-                                <dd class="tabcontent1" style="display:none;">
-                                    <ol>
-                                        <li><a href="grid.html?cat=5">Iphone 4</a></li>
-                                        <li><a href="grid.html?cat=6">Ipad 4s</a></li>
-                                        <li><a href="grid.html?cat=6">Ipad 5</a></li>
-                                        <li><a href="grid.html?cat=6">Ipad 5s</a></li>
-                                        <li><a href="grid.html?cat=6">Ipad 6s</a></li>
-                                    </ol>
-                                </dd>
-                                <dt id="tab11" class="tab-accordion accordion-open">Samsung</dt>
-                                <dd class="tabcontent11">
-                                    <ol>
-                                        <li><a href="grid.html?cat=5">Samsung Glaxy S I</a></li>
-                                        <li><a href="grid.html?cat=6">Sangsung Glaxy S II</a></li>
-                                        <li><a href="grid.html?cat=6">Samsung Glaxy S III</a></li>
-                                        <li><a href="grid.html?cat=6">Samsung Glaxy Note II</a></li>
-                                        <li><a href="grid.html?cat=6">Samsung Glaxy Note III</a></li>
-                                    </ol>
-                                </dd>
-                                <dt id="tab12" class="tab-accordion accordion-close">HTC</dt>
-                                <dd class="tabcontent12" style="display:none;">
-                                    <ol>
-                                        <li><a href="grid.html?cat=5">HTC Desire X</a></li>
-                                        <li><a href="grid.html?cat=6">HTC Desire Y</a></li>
-                                    </ol>
-                                </dd>
-                                <dt id="tab13" class="tab-accordion accordion-close">Blackberry</dt>
-                                <dd class="tabcontent13" style="display:none;">
-                                    <ol>
-                                        <li><a href="grid.html?cat=5">Blackberry X</a></li>
-                                        <li><a href="grid.html?cat=6">Blackberry Y</a></li>
-                                    </ol>
-                                </dd>
-                            </dl>
+                        <div>
+                            <ul>
+                                @foreach (var item in ViewBag.DongDienThoai)
+                                {
+
+                                    <li style="padding:10px">
+                                        @Html.ActionLink((string)item.TenDongDT, "Grid", "Home", new { id = item.MaDT })
+                                    </li>
+
+                                    @*<a id="tab1" class="tab-accordion accordion-close">Apple</a>
+                    <a id="tab11" class="tab-accordion accordion-open">Samsung</a>
+                    <a id="tab12" class="tab-accordion accordion-close">HTC</a>
+                    <a id="tab13" class="tab-accordion accordion-close">Blackberry</a>*@
+                                }
+                            </ul>
                         </div>
                         <div class="block-title-shop-by">
                             <strong><span>Shop by</span></strong>
