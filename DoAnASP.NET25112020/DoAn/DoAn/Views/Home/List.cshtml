@@ -246,16 +246,12 @@
 
                                 @foreach (var item in Model)
                                 {
-
                                     <li class="item">
                                         <div class="inner-item ">
                                             <div class="item-image">
-                                                <div class="inner">
-                                                    
-                                                    <a class="product-image no-touch" href="#" title="My Download Product">
-                                                        @*<img class="first_image" src="~/ImgDienThoai/@Html.DisplayFor(modelItem => item.Hinh)" alt="My Download Product" />*@
-                                                        @Html.ActionLink((string)@item.Hinh, "Details", "Home", new { id = @item.ID })
-
+                                                <div class="inner">                                                  
+                                                    <a class="product-image no-touch" href="@Url.Action("Details", "Home", new { id = @item.ID })" title="My Download Product">
+                                                        <img class="first_image" src="~/ImgDienThoai/@Html.DisplayFor(modelItem => item.Hinh)" alt="My Download Product" />
                                                     </a>
                                                 </div>
                                             </div>
