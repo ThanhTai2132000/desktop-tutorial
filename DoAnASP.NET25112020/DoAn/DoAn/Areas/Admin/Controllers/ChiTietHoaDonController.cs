@@ -28,7 +28,7 @@ namespace DoAn.Areas.Admin.Controllers
             try
             {
                 JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
-                if (acc.SelectToken("LoaiTK") == 1) return View("../Shared/Error");
+                
                 ViewBag.account = acc.SelectToken("TenTK").ToString();
             }
             catch
