@@ -117,6 +117,22 @@ namespace DoAn.Migrations
                     b.ToTable("HoaDon");
                 });
 
+            modelBuilder.Entity("DoAn.Areas.Admin.Models.TaiKhoanModel", b =>
+                {
+                    b.Property<string>("TenTK")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("LoaiTK")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MatKhau")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TenTK");
+
+                    b.ToTable("TaiKhoan");
+                });
+
             modelBuilder.Entity("DoAn.Areas.Admin.Models.ChiTietHoaDonModel", b =>
                 {
                     b.HasOne("DoAn.Areas.Admin.Models.DienThoaiModel", "DienThoai")

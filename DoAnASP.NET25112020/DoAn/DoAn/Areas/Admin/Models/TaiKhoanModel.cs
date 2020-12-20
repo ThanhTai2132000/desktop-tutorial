@@ -10,10 +10,10 @@ namespace DoAn.Areas.Admin.Models
     public class TaiKhoanModel
     {
         [Key]
-        public string TaiKhoan { get; set; }
+        public string TenTK { get; set; }
         public string MatKhau { get; set; }
-        public int MaTaiKhoan { get; set; }
-        [ForeignKey("MaTaiKhoan")]
+        [Range(0, 1)]
+        public int LoaiTK{ get; set; }
         
 
     }
