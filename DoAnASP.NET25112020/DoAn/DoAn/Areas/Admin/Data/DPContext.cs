@@ -13,6 +13,7 @@ namespace DoAn.Areas.Admin.Data
         public DbSet<Models.DongDienThoaiModel> DongDienThoai { get; set; }
         public DbSet<Models.HoaDonModel> HoaDon { get; set; }
         public DbSet<Models.ChiTietHoaDonModel> ChiTietHoaDon { get; set; }
+        public DbSet<Models.TaiKhoanModel> TaiKhoan { get; set; }
 
     }
 }

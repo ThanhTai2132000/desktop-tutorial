@@ -9,6 +9,7 @@ using DoAn.Areas.Admin.Data;
 using DoAn.Areas.Admin.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json.Linq;
 
 namespace DoAn.Areas.Admin.Controllers
 {
@@ -25,6 +26,18 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai
         public async Task<IActionResult> Index()
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             var dPContext = _context.DienThoai.Include(d => d.DongDT);
             return View(await dPContext.ToListAsync());
         }
@@ -32,6 +45,18 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             if (id == null)
             {
                 return NotFound();
@@ -51,6 +76,18 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai/Create
         public IActionResult Create()
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             ViewData["MaDongDT"] = new SelectList(_context.DongDienThoai, "MaDT", "MaDT");
             return View();
         }
@@ -62,6 +99,18 @@ namespace DoAn.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,TenDT,MaDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel , IFormFile ful)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             if (ModelState.IsValid)
             {
                 _context.Add(dienThoaiModel);
@@ -83,6 +132,18 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             if (id == null)
             {
                 return NotFound();
@@ -104,6 +165,18 @@ namespace DoAn.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,TenDT,MaDongDT,Hinh,DonGia,GiaKM")] DienThoaiModel dienThoaiModel)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             if (id != dienThoaiModel.ID)
             {
                 return NotFound();
@@ -136,6 +209,18 @@ namespace DoAn.Areas.Admin.Controllers
         // GET: Admin/DienThoai/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             if (id == null)
             {
                 return NotFound();
@@ -157,6 +242,18 @@ namespace DoAn.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return View("../Shared/Error");
+            }
+
+
+
             var dienThoaiModel = await _context.DienThoai.FindAsync(id);
             _context.DienThoai.Remove(dienThoaiModel);
             await _context.SaveChangesAsync();

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebApplication1</title>
     @await Html.PartialAsync("CssPartial.cshtml")
-
+   
 </head>
 <body class="product-view">
+
     @await Html.PartialAsync("HeaderPartial.cshtml")
     @RenderBody()
     @await Html.PartialAsync("FooderPartial.cshtml")
