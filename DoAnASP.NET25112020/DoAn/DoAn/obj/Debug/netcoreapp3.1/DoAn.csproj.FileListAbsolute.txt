@@ -1138,3 +1138,4 @@ D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\o
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.genruntimeconfig.cache
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\Error.cshtml.g.cs
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\CSSPartial.cshtml.g.cs
