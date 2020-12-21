@@ -30,8 +30,8 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model) {
+    <tbody id="list-dt">
+@*@foreach (var item in Model) {
         <tr class="result">
             <td>
                 @Html.DisplayFor(modelItem => item.TenDT)
@@ -54,11 +54,12 @@
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
-}
+}*@
     </tbody>
 </table>
 
 @section Scripts {
+    @*Tìm kiếm realtime*@
     <script>
         $(document).ready(function () {
             function Contains(txt_one, txt_two) {
@@ -75,4 +76,41 @@
             });
         });
     </script>
+
+
+    @*Hiện list điện thoại bằng JSON và API*@
+<script>
+
+        $(document).ready(function () {
+            $.ajax({
+                method: "GET",
+                url: "../api/PhoneListAPI/GetPhoneList",
+
+                success: function (list) {
+                    listJSON = JSON.parse(list);
+                    var data = '';
+                    $.each(listJSON, function (key, value) {
+                        data += '<tr class="result">';
+                        data += '<td>' + value.TenDT + '</td>';
+                        data += '<td>' + value.MaDT + '</td>';
+                        data += '<td>' + value.Hinh + '</td>';
+                        data += '<td>' + value.DonGia + '</td>';
+                        data += '<td>' + value.GiaKM + '</td>';
+                        data += '<td>';
+                        data += '<a href="/Admin/DienThoai/Edit/' + value.ID + '">Edit</a> |';
+                        data += '<a href="/Admin/DienThoai/Details/' + value.ID + '">Details</a> |';
+                        data += '<a href="/Admin/DienThoai/Delete/' + value.ID + '">Delete</a>';
+                        data += '</td>';
+                        data += '</tr>';
+
+                    });
+                    $('#list-dt').append(data);
+                }
+
+            });
+
+        });
+
+</script>
+
 }

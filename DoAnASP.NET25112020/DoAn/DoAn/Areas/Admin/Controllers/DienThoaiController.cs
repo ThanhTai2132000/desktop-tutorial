@@ -38,8 +38,8 @@ namespace DoAn.Areas.Admin.Controllers
 
 
 
-            var dPContext = _context.DienThoai.Include(d => d.DongDT);
-            return View(await dPContext.ToListAsync());
+            /*var dPContext = _context.DienThoai.Include(d => d.DongDT);*/
+            return View(/*await dPContext.ToListAsync()*/);
         }
 
         // GET: Admin/DienThoai/Details/5
