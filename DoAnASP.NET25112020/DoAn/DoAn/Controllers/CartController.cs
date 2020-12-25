@@ -71,7 +71,7 @@ namespace DoAn.Controllers
                 //  return Json(cart2);
             }
 
-            return View("../Home/Details");
+            return RedirectToAction(nameof(ListCart));
         }
         public IActionResult ListCart()
         {

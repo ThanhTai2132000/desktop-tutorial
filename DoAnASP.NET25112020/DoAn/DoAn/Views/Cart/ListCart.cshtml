@@ -36,7 +36,7 @@
                                 <td><input type="number" class="@txt_class" value="@item.Quantity" /></td>
                                 <td>@total</td>
                                 <td><a href="" data-id="@item.DienThoai.ID" class="updateCart">Update</a></td>
-                                <td><a asp-controller="Product" asp-action="deleteCart" asp-route-id="@item.DienThoai.ID">Delete</a></td>
+                                <td><a asp-controller="Cart" asp-action="deleteCart" asp-route-id="@item.DienThoai.ID">Delete</a></td>
 
                             </tr>
                         </thead>
