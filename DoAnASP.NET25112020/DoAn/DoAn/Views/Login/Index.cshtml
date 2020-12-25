@@ -3,9 +3,6 @@
 *@
 @{
 }
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog" role="document">
@@ -26,25 +23,89 @@
 
 <input class="form-control" type="text" id="UserName" name="UserName" placeholder="User Name" />
 <input class="form-control" type="password" id="Password" name="Password" placeholder="Password" />
-<button class="btn btn-primary" onclick="Login()" name="abc" value="submit">Login</button>
+<button class="btn btn-primary" onclick="Login()" name="abc" value="submit" style="margin-top: -23px;height: 39px">Login</button>
 
+
+<!--Login FB-->
+<div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
 <p id="demo"></p>
+<!--End Login FB-->
 
 
 @section Scripts {
+    <!------------------------------------------------------------------------------------------------------------>
+    <!--Tải và khởi chạy JavaScript SDK trong trang HTML-->
+    <script>
+        function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+            console.log('statusChangeCallback');
+            console.log(response);                   // The current login status of the person.
+            if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+                testAPI();
+            } else {                                 // Not logged into your webpage or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this webpage.';
+            }
+        }
+
+
+        function checkLoginState() {               // Called when a person is finished with the Login Button.
+            FB.getLoginStatus(function (response) {   // See the onlogin handler
+                statusChangeCallback(response);
+            });
+        }
+
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '444705446538678',
+                cookie: true,                     // Enable cookies to allow the server to access the session.
+                xfbml: true,                     // Parse social plugins on this webpage.
+                version: 'v9.0'           // Use this Graph API version for this call.
+            });
+
+
+            FB.getLoginStatus(function (response) {   // Called after the JS SDK has been initialized.
+                statusChangeCallback(response);        // Returns the login status.
+            });
+        };
+
+        function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+                console.log('Successful login for: ' + response.name);
+                document.getElementById('status').innerHTML =
+                    'Thanks for logging in, ' + response.name + '!';
+            });
+        }
+    </script>
+
+
+    <!-- The JS SDK Login Button -->
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <div id="status">
+    </div>
+
+    <!-- Load the JS SDK asynchronously -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+    <!--JavaScript SDK FB-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=444705446538678&autoLogAppEvents=1" nonce="94VAP1Hg">
+    </script>
+    <!--End tải và khởi chạy JavaScript SDK trong trang HTML-->
+    <!------------------------------------------------------------------------------------------------------------>
     <!--Kiểm tra tài khoản và mật khẩu rỗng-->
     <script>
         function validate() {
             var n1 = document.getElementById("UserName");
             var n2 = document.getElementById("Password");
             if (n1.value == "" && n2.value == "") {
-                //if (n1.value == n2.value) {
-                //    return true;
-                //}
                 $('#form-modal .modal-body').html("Không được để trống tài khoản hoặc mật khẩu !!!");
                 $('#form-modal .modal-title').html("Thông báo");
                 $('#form-modal').modal('show');
-               
             }
         }
     </script>
@@ -61,7 +122,7 @@
                     'username': username,
                     'password': pass
                 },
-            
+
 
                 success: function (status) {
                     //Neu ghi JSON.stringify(status) luc nay thi status co gtr la:
