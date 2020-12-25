@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoAn.Migrations
 {
     [DbContext(typeof(DPContext))]
-    [Migration("20201216025414_AddTableTaiKhoan")]
-    partial class AddTableTaiKhoan
+    [Migration("20201221162526_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
