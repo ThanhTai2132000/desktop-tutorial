@@ -7,6 +7,7 @@ using DoAn.Areas.Admin.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace DoAn.Controllers
 {
@@ -31,6 +32,15 @@ namespace DoAn.Controllers
         }
         public IActionResult addCart(int id)
         {
+            try
+            {
+                JObject acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+            }
+            catch
+            {
+                return RedirectToAction("Index","Login");
+            }
             var cart = HttpContext.Session.GetString("cart");//get key cart
             if (cart == null)
             {
