@@ -1159,3 +1159,10 @@ C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\b
 C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
 C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.MvcApplicationPartsAssemblyInfo.cache
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+D:\Nam3-HK1\ASP.NET\DoAnASP.NET\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll

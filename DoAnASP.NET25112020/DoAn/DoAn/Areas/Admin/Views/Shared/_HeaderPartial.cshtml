@@ -8,12 +8,12 @@
             <div class="sidebar-menu">
                 <ul class="menu">
                     <li class='sidebar-title'>Main Menu</li>
-                    <li class="sidebar-item active">
-                        <i data-feather="home" width="20"></i>
+                    <li class="sidebar-item">
+                        
                         @Html.ActionLink("DongDienThoai", "Index", "DongDienThoai", null, new { @class = "sidebar-link" })
                     </li>
-                    <li class="sidebar-item ">
-                        <i data-feather="home" width="20"></i>
+                    <li class="sidebar-item">
+                        
                         @Html.ActionLink("DienThoai", "Index", "DienThoai", null, new { @class = "sidebar-link" })
                     </li>
                 </ul>
@@ -59,23 +59,18 @@
                                 <i data-feather="mail"></i>
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                            <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                            <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
-                        </div>
+                        
                     </li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <div class="avatar mr-1">
-                                <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                                
+                                <img src="~/template/assetsadmin/images/avatar/avatar-s-1.png" />
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
-                            <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                            <a class="dropdown-item" href="#"><i data-feather="mail"></i> Messages</a>
                             <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
@@ -85,3 +80,6 @@
                 </ul>
             </div>
         </nav>
+        <div style="margin: 2vw;">
+
+
