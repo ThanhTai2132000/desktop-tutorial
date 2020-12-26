@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "ListCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="list-cart">
+        <table class="table" border="1">
+            @{
+                int STT = 0;
+                if (ViewBag.carts != null)
+                {
+                    <thead>
+                        <tr class="info">
+                            <th>ID</th>
+                            <th>Tên Điện Thoại</th>
+                            <th>Hình Điện Thoại</th>
+                            <th>Đợn Giá</th>
+                            <th>Số Lượng</th>
+                            <th>Tổng Giá</th>
+                            <th>Cập Nhật</th>
+                            <th>Xoá</th>
+                        </tr>
+                    </thead>
+                    foreach (var item in ViewBag.carts)
+                    {
+                        string txt_class = "quantity_" + item.DienThoai.ID;
+                        STT++;
+                        float total = item.DienThoai.DonGia * item.Quantity;
+                        <thead>
+                            <tr class="info">
+
+                                <td>@STT</td>
+                                <td>@item.DienThoai.TenDT</td>
+                                <td><img src="~/ImgDienThoai/@item.DienThoai.Hinh" width="100" height="100" /></td>
+                                <td>@item.DienThoai.DonGia</td>
+                                <td><input type="number" class="@txt_class" value="@item.Quantity" /></td>
+                                <td>@total</td>
+                                <td><a href="" data-id="@item.DienThoai.ID" class="updateCart">Update</a></td>
+                                <td><a asp-controller="Cart" asp-action="deleteCart" asp-route-id="@item.DienThoai.ID">Delete</a></td>
+
+                            </tr>
+                        </thead>
+                    }
+                }
+                else
+                {
+                    <h1>Vỏ Hàng Trống</h1>
+                    ;
+                }
+            }
+
+        </table>
+    </div>
+</div>
+    @section Scripts {
+
+        <script>
+    $(document).ready(function () {
+        $(".updateCart").click(function (event) {
+            event.preventDefault();
+            var quantity = $(".quantity_" + $(this).attr("data-id")).val();
+            console.log(quantity);
+            $.ajax({
+                type: "POST",
+                url:"@Url.Action("updateCart","Cart")",
+                data: {
+                    id: $(this).attr("data-id"),
+                    quantity:quantity
+                },
+                success: function (result) {
+                    window.location.href = '@Url.Action("ListCart","Cart")';
+                }
+            });
+        });
+    });
+        </script>
+    }

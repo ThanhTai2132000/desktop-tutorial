@@ -14572,6 +14572,7 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
       "FileKind": "mvc"
@@ -14592,6 +14593,33 @@
       "FileKind": "mvc"
     },
     {
+=======
+      "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Cart\\ListCart.cshtml",
+      "TargetPath": "Views\\Cart\\ListCart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> ThanhTai
       "FilePath": "d:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Index.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Index.cshtml",
       "FileKind": "mvc"

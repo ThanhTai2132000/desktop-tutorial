@@ -237,13 +237,10 @@
 
                             var statusAfter = JSON.parse(status); //Luc nay statusAfter co kdl la JSON va gtr la:
                             //{ "TenTK": "Admin", "MatKhau": "123", "LoaiTK": 0 }
-
                             //Kiem tra tai khoan co ton tai hay khong
-
-
                             if (statusAfter != null) {
                                 if (statusAfter.LoaiTK == 0) window.location.href = '@Url.Action("","Admin")';
-                                else if (statusAfter.LoaiTK == 1) window.location.href = '@Url.Action("Index","Home")';
+                                else if (statusAfter.LoaiTK == 1) window.location.href = '@Url.Action("List","Home")';
                             }
 
                             else {
