@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xEZJNnOLmNPDvvCD0OPiFUvJ91Oj8PhmYVrRtTWTM0AIGL9qLNiZU7YnJOoCY14E0k4aaFBuGuXr6QGsMTOdxQ==",
+  "dgSpecHash": "jTw5MLSQNmm8nerwWoXkJuMQTkZvwYRXvoGIu8jMRzcSsHuFitjOKXxOoAfbKQ52hh6T++NWJXrrol9UnldedQ==",
   "success": true,
   "projectFilePath": "D:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
   "expectedPackageFiles": [
@@ -59,7 +59,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

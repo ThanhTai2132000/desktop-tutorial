@@ -12,3 +12,4 @@ showInPopUp = (url, title) => {
             $('#form-modal').modal('show');
         }
     })
+}

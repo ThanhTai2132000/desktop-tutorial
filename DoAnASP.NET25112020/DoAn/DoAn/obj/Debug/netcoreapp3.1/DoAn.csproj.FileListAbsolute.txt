@@ -1288,8 +1288,6 @@ D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\bin\D
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.csprojAssemblyReference.cache
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.AssemblyInfoInputs.cache
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.AssemblyInfo.cs
-D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.csproj.CoreCompileInputs.cache
-D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.MvcApplicationPartsAssemblyInfo.cache
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.RazorAssemblyInfo.cache
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.RazorAssemblyInfo.cs
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.TagHelpers.input.cache
@@ -1346,3 +1344,5 @@ D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\D
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.pdb
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.genruntimeconfig.cache
 D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\Razor\Views\Cart\ListCart.cshtml.g.cs
+D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.csproj.CoreCompileInputs.cache
+D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\obj\Debug\netcoreapp3.1\DoAn.MvcApplicationPartsAssemblyInfo.cache

@@ -47,8 +47,15 @@ using DoAn.Areas.Admin.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Views\_ViewImports.cshtml"
+using DoAn.Controllers;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"709e091d8322718daa05f2310d6a21378f000430", @"/Views/Home/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"902cfcc0b7af8a203eaf620f3a858948f8e47815", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"00406cd98a20fdec719ee41e6da1061223c40207", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<DoAn.Areas.Admin.Models.DienThoaiModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/template/images/banner13.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -231,7 +238,7 @@ using DoAn.Areas.Admin.Models;
                                 <li data-target=""#box-banner"" data-slide-to=""1""></li>
                                 <li data-target=""#box-banner"" dat");
             WriteLiteral("a-slide-to=\"2\"></li>\r\n                            </ol>\r\n                            <div class=\"carousel-inner\">\r\n                                <div class=\"item active\">\r\n                                    <a href=\"detail.html\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043016624", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043016826", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -255,7 +262,7 @@ using DoAn.Areas.Admin.Models;
                                 </div>
                                 <div class=""item"">
                                     <a href=""detail.html"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043018411", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043018613", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -280,7 +287,7 @@ using DoAn.Areas.Admin.Models;
                                 </div>
                                 <div class=""item"">
                                     <a href=""detail.html"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043020200", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043020402", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -310,7 +317,7 @@ using DoAn.Areas.Admin.Models;
                 <div id=""main"" class=""col-lg-9 col-md-9 col-sm-8 col-xs-12 col-main"">
                     <div class=""wrap-banner-cate"">
                         <a class=""cate-img"" href=""detail.html"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043022207", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043022409", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -424,7 +431,7 @@ WriteAttributeValue("", 15224, Url.Action("Details", "Home", new { id = @item.ID
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" title=\"My Download Product\">\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043029250", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "709e091d8322718daa05f2310d6a21378f00043029452", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -500,7 +507,7 @@ AddHtmlAttributeValue("", 15410, Html.DisplayFor(modelItem => item.Hinh), 15410,
                                                                 </span>
                               ");
             WriteLiteral("                              </div>\r\n                                                        </div>\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "709e091d8322718daa05f2310d6a21378f00043034805", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "709e091d8322718daa05f2310d6a21378f00043035007", async() => {
                 WriteLiteral("<span>Add to Cart</span>");
             }
             );
