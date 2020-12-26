@@ -2,6 +2,7 @@
     var data = Context.Session.GetString("cart");
 
     int coutCart = 0;
+    List<CartModel> dataCart = null;
     if (data == null)
     {
         coutCart = 0;
@@ -9,13 +10,17 @@
     else
     {
         var data2 = Context.Session.GetString("cart");
-        List<CartModel> dataCart = JsonConvert.DeserializeObject<List<CartModel>>(data2);
+        dataCart = JsonConvert.DeserializeObject<List<CartModel>>(data2);
+
+
+
         foreach (var item in dataCart)
         {
             coutCart += item.Quantity;
         }
 
     }
+    
 
 }
 <!--begin header-->
@@ -447,19 +452,33 @@
                                         <div class="inner">
                                             <p class="block-subtitle">Recently added item(s)</p>
                                             <ol id="cart-sidebar" class="mini-products-list">
-                                                <li class="item">
-                                             
-                                                </li>
+                                                @if (dataCart != null)
+                                                {
+                                                    foreach (var datacart in dataCart)
+                                                    {
+
+                                                        
+                                                        <li class="item" style="padding: 0; margin-bottom:1vw;">
+                                                            <div style="height:6vw;">
+                                                                <div style="width: 6vw; height: 100%; display:inline-block;"><img style="width:100%; height:100%" src="~/ImgDienThoai/@datacart.DienThoai.Hinh" alt="Alternate Text" /></div>
+                                                                <div style="display:inline-block">
+                                                                    <div>Tên: @datacart.DienThoai.TenDT</div>
+
+                                                                    <div>Giá: <span style="color:orangered">@datacart.DienThoai.DonGia</span> </div>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        
+
+                                                        </li>
+                                                    }
+                                                }
                                             </ol>
-                                            <div class="summary">
-                                                <p class="subtotal">
-                                                    <span class="label">Subtotal:</span> <span class="price">$200.00</span>
-                                                </p>
-                                            </div>
+                                            
                                             <div class="actions">
                                                 <div class="a-inner">
                                                     @Html.ActionLink("View My Cart", "ListCart", "Cart", null, new { @class = "btn-mycart" })
-                                                    <a href="" title="Checkout" class="btn-checkout">Checkout</a>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
