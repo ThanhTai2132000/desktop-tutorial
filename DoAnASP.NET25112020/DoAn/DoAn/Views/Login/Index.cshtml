@@ -98,64 +98,59 @@
     <!--End tải và khởi chạy JavaScript SDK trong trang HTML-->
     <!------------------------------------------------------------------------------------------------------------>
     <!--Kiểm tra tài khoản và mật khẩu rỗng-->
-    <script>
-        function validate() {
-            var n1 = document.getElementById("UserName");
-            var n2 = document.getElementById("Password");
-            if (n1.value == "" && n2.value == "") {
-                $('#form-modal .modal-body').html("Không được để trống tài khoản hoặc mật khẩu !!!");
-                $('#form-modal .modal-title').html("Thông báo");
-                $('#form-modal').modal('show');
-            }
-        }
-    </script>
+
 
     <script>
         function Login() {
             var username = $("#UserName").val();
             var pass = $("#Password").val();
 
-            $.ajax({
-                method: "GET",
-                url: "../api/LoginAPI/GetAccount",
-                data: {
-                    'username': username,
-                    'password': pass
-                },
+            if (username == "" && pass == "") {
+                $('#form-modal .modal-body').html("Không được để trống tài khoản hoặc mật khẩu !!!");
+                $('#form-modal .modal-title').html("Thông báo");
+                $('#form-modal').modal('show');
+            }
+            else {
+                $.ajax({
+                    method: "GET",
+                    url: "../api/LoginAPI/GetAccount",
+                    data: {
+                        'username': username,
+                        'password': pass
+                    },
 
 
-                success: function (status) {
-                    //Neu ghi JSON.stringify(status) luc nay thi status co gtr la:
-                    //"{\"TenTK\":\"Admin\",\"MatKhau\":\"123\",\"LoaiTK\":0}" nen phai thuc hien JSON.parse()
+                    success: function (status) {
+                        //Neu ghi JSON.stringify(status) luc nay thi status co gtr la:
+                        //"{\"TenTK\":\"Admin\",\"MatKhau\":\"123\",\"LoaiTK\":0}" nen phai thuc hien JSON.parse()
 
-                    var statusAfter = JSON.parse(status); //Luc nay statusAfter co kdl la JSON va gtr la:
-                    //{ "TenTK": "Admin", "MatKhau": "123", "LoaiTK": 0 }
+                        var statusAfter = JSON.parse(status); //Luc nay statusAfter co kdl la JSON va gtr la:
+                        //{ "TenTK": "Admin", "MatKhau": "123", "LoaiTK": 0 }
 
-                    //Kiem tra tai khoan co ton tai hay khong
+                        //Kiem tra tai khoan co ton tai hay khong
 
-                    if (statusAfter != null) {
                         if (statusAfter != null) {
-                            if (statusAfter.LoaiTK == 0) window.location.href = '@Url.Action("","Admin")';
-                            else if (statusAfter.LoaiTK == 1) window.location.href = '@Url.Action("Index","Home")';
+                            if (statusAfter != null) {
+                                if (statusAfter.LoaiTK == 0) window.location.href = '@Url.Action("","Admin")';
+                                else if (statusAfter.LoaiTK == 1) window.location.href = '@Url.Action("Index","Home")';
+                            }
+                        }
+                        else {
+                            $('#form-modal .modal-body').html("Sai tài khoản hoặc mật khẩu rồi bro ơi :((((");
+                            $('#form-modal .modal-title').html("Thông báo");
+                            $('#form-modal').modal('show');
+                            $("#UserName").val("");
+                            $("#Password").val("");
                         }
                     }
-                    else {
-                        $('#form-modal .modal-body').html("Sai tài khoản hoặc mật khẩu rồi bro ơi :((((");
-                        $('#form-modal .modal-title').html("Thông báo");
-                        $('#form-modal').modal('show');
-                        $("#UserName").val("");
-                        $("#Password").val("");
-                    }
-                    @*
-                    var myJSON = JSON.stringify(status);  //cach chuyen tu JSON sang string
-                    document.getElementById("demo").innerHTML = myJSON;*@
-                }
-
-            })
-
-
-        };
+                })
+            }
+        }
+        
     </script>
 
 
 }
+    @*
+    var myJSON = JSON.stringify(status);  //cach chuyen tu JSON sang string
+    document.getElementById("demo").innerHTML = myJSON;*@
