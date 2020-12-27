@@ -8,9 +8,15 @@ using Microsoft.Extensions.Logging;
 using DoAn.Models;
 using DoAn.Areas.Admin.Data;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
 using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Http;
 using DoAn.Areas.Admin.Models;
+=======
+using Microsoft.AspNetCore.Http;
+using DoAn.Areas.Admin.Models;
+using Newtonsoft.Json;
+>>>>>>> 9610b00785e4a37d5d272f173a93848987d9beea
 
 namespace WebApplication1.Controllers
 {
@@ -34,7 +40,8 @@ namespace WebApplication1.Controllers
         }
         public IActionResult List(string? id)
         {
-            ViewBag.DongDienThoai = _context.DongDienThoai.ToList();
+         
+            ViewBag.DongDienThoai = _context.DongDienThoai.ToList(); 
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
             return View(list.ToList());

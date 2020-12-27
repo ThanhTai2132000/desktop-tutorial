@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+  "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14387,198 +14387,218 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 800
+    "CSharpLanguageVersion": 900
   },
   "RootNamespace": "DoAn",
   "Documents": [
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Delete.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\HeaderPartial.cshtml",
-      "TargetPath": "Views\\Shared\\HeaderPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\Index.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Details.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Delete.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Edit.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\Grid.cshtml",
-      "TargetPath": "Views\\Home\\Grid.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Edit.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Details.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\JsPartial.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\JsPartial.cshtml",
       "TargetPath": "Views\\Shared\\JsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Index.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Cart\\ListCart.cshtml",
+      "TargetPath": "Views\\Cart\\ListCart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\Details.cshtml",
-      "TargetPath": "Views\\Home\\Details.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Details.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Edit.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\List.cshtml",
-      "TargetPath": "Views\\Home\\List.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\_FooterPartial.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Shared\\_FooterPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Details.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Details.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\FooderPartial.cshtml",
-      "TargetPath": "Views\\Shared\\FooderPartial.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\Details.cshtml",
+      "TargetPath": "Views\\Home\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Create.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Create.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\CssPartial.cshtml",
-      "TargetPath": "Views\\Shared\\CssPartial.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\List.cshtml",
+      "TargetPath": "Views\\Home\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Create.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Create.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Create.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Create.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\_HeaderPartial.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\_HeaderPartial.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Shared\\_HeaderPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Edit.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Edit.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Create.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Create.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Delete.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Delete.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DongDienThoai\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DongDienThoai\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Home\\Grid.cshtml",
+      "TargetPath": "Views\\Home\\Grid.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\HocTap\\DoAnASP.NETDuPhong\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Index.cshtml",
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\FooderPartial.cshtml",
+      "TargetPath": "Views\\Shared\\FooderPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\HeaderPartial.cshtml",
+      "TargetPath": "Views\\Shared\\HeaderPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\CSSPartial.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\CSSPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\CssPartial.cshtml",
+      "TargetPath": "Views\\Shared\\CssPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\HoaDon\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\HoaDon\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\ChiTietHoaDon\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ChiTietHoaDon\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\Shared\\_FooterPartial.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Shared\\_FooterPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\Areas\\Admin\\Views\\DienThoai\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DienThoai\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],

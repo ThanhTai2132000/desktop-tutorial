@@ -3,12 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <input type="text" id="Search" placeholder="Search here..." />
+    <div style="float: right">
+        <b><p style="display: contents;">TÌM KIẾM: </p></b>
+        <input style="border-radius: 4vw; padding: 1vw; width: 25vw;" type="text" id="Search" placeholder="Search here..." />
+    </div>
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<a onclick="showInPopUp('@Url.Action("Create","DienThoai",null,Context.Request.Scheme)','')">Create New</a>
 <table class="table">
     <thead>
         <tr>
@@ -31,32 +32,47 @@
         </tr>
     </thead>
     <tbody id="list-dt">
-@*@foreach (var item in Model) {
-        <tr class="result">
-            <td>
-                @Html.DisplayFor(modelItem => item.TenDT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DongDT.MaDT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hinh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DonGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiaKM)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}*@
+        @*@foreach (var item in Model) {
+                    <tr class="result">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DongDT.MaDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hinh)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DonGia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaKM)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                        </td>
+                    </tr>
+            }*@
     </tbody>
 </table>
+<div class="modal" tabindex="-1" role="dialog" id="form-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     @*Tìm kiếm realtime*@
@@ -79,7 +95,7 @@
 
 
     @*Hiện list điện thoại bằng JSON và API*@
-<script>
+    <script>
 
         $(document).ready(function () {
             $.ajax({
@@ -111,6 +127,6 @@
 
         });
 
-</script>
+    </script>
 
 }

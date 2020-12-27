@@ -40,7 +40,12 @@ namespace DoAn.Areas.API.Controllers
                     var str = JsonConvert.SerializeObject(account);
                     HttpContext.Session.SetString("account", str);
                 }
-                
+                else
+                {
+                    var str = JsonConvert.SerializeObject(account);
+                    HttpContext.Session.SetString("accountuser", str);
+                }
+
             }
             return JsonConvert.SerializeObject(account);
         }
