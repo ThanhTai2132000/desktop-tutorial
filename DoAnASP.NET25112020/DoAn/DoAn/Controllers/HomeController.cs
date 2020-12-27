@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 using DoAn.Models;
 using DoAn.Areas.Admin.Data;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Http;
+using DoAn.Areas.Admin.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -22,7 +25,12 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+            TaiKhoanModel TK = new TaiKhoanModel();
+            TK.TenTK = us.SelectToken("TenTK").ToString();
+            TK.MatKhau = us.SelectToken("MatKhau").ToString();
+            TK.LoaiTK = Int32.Parse(us.SelectToken("LoaiTK").ToString());
+            return View(TK);
         }
         public IActionResult List(string? id)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DoAn.Areas.Admin.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace DoAn.Areas.Admin.Data
         public DbSet<Models.DongDienThoaiModel> DongDienThoai { get; set; }
         public DbSet<Models.HoaDonModel> HoaDon { get; set; }
         public DbSet<Models.ChiTietHoaDonModel> ChiTietHoaDon { get; set; }
-        public DbSet<Models.TaiKhoanModel> TaiKhoan { get; set; }
+        public DbSet<TaiKhoanModel> TaiKhoan { get; set; }
 
     }
 }
