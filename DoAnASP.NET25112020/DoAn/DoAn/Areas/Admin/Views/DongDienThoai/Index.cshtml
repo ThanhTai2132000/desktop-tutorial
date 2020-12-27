@@ -21,21 +21,55 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(model => item.MaDT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenDongDT)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaDT">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaDT">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaDT">Delete</a>
-            </td>
-        </tr>
-}
+    <tbody id="list-ddt">
+        @*@foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(model => item.MaDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenDongDT)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.MaDT">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.MaDT">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.MaDT">Delete</a>
+                        </td>
+                    </tr>
+            }*@
     </tbody>
 </table>
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                method: "GET",
+                url: "../api/PhoneTypeListAPI/GetPhoneTypeList",
+
+                success: function (list) {
+                    listJSON = JSON.parse(list);
+
+                    var data = '';
+                    $.each(listJSON, function (key, value) {
+                        data += '<tr class="result">';
+                        data += '<td>' + value.MaDT + '</td>';
+                        data += '<td>' + value.TenDongDT + '</td>';
+                        data += '<td>';
+                        data += '<a href="/Admin/DongDienThoai/Edit/' + value.MaDT + '">Edit</a> |';
+                        data += '<a href="/Admin/DongDienThoai/Details/' + value.MaDT + '">Details</a> |';
+                        data += '<a href="/Admin/DongDienThoai/Delete/' + value.MaDT + '">Delete</a>';
+                        data += '</td>';
+                        data += '</tr>';
+
+                    });
+                    $('#list-ddt').append(data);
+                }
+
+            });
+
+        });
+
+    </script>
+}
