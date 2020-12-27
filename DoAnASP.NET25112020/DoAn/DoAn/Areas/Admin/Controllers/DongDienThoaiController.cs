@@ -39,7 +39,7 @@ namespace DoAn.Areas.Admin.Controllers
 
 
 
-            return View(await _context.DongDienThoai.ToListAsync());
+            return View(/*await _context.DongDienThoai.ToListAsync()*/);
         }
 
         // GET: Admin/DongDienThoai/Details/5
