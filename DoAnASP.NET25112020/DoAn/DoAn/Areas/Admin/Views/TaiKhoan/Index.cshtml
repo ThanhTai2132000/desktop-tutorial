@@ -1,0 +1,81 @@
+﻿@model IEnumerable<DoAn.Areas.Admin.Models.TaiKhoanModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoaiTK)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="from">
+        @*@foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenTK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiTK)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TenTK">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TenTK">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TenTK">Delete</a>
+                </td>
+            </tr>
+        }*@
+    </tbody>
+</table>
+
+@section Scripts{
+
+    @*Hiện list tài khoản bằng JSON và API*@
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                method: "GET",
+                url: "../api/TaiKhoanAPI/TaiKhoanList",
+
+                success: function (list) {
+                    listJSON = JSON.parse(list);
+                    var data = '';
+                    $.each(listJSON, function (key, value) {
+                        data += '<tr class="result">';
+                        data += '<td>' + value.TenTK + '</td>';
+                        data += '<td>' + value.MatKhau + '</td>';
+                        data += '<td>' + value.LoaiTK + '</td>';                     
+                        data += '<td>';
+                        data += '<a href="/Admin/TaiKhoan/Edit/' + value.TenTK + '">Edit</a> |';
+                        data += '<a href="/Admin/TaiKhoan/Details/' + value.TenTK + '">Details</a> |';
+                        data += '<a href="/Admin/TaiKhoan/Delete/' + value.TenTK + '">Delete</a>';
+                        data += '</td>';
+                        data += '</tr>';
+                    });
+                    $('#from').append(data);
+                }
+
+            });
+
+        });
+    </script>
+}
