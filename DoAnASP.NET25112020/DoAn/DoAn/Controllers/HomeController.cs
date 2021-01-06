@@ -29,12 +29,12 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
-            JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+            /*JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
             TaiKhoanModel TK = new TaiKhoanModel();
             TK.TenTK = us.SelectToken("TenTK").ToString();
             TK.MatKhau = us.SelectToken("MatKhau").ToString();
-            TK.LoaiTK = Int32.Parse(us.SelectToken("LoaiTK").ToString());
-            return View(TK);
+            TK.LoaiTK = Int32.Parse(us.SelectToken("LoaiTK").ToString());*/
+            return View(/*TK*/);
         }
         public IActionResult List(string? id)
         {

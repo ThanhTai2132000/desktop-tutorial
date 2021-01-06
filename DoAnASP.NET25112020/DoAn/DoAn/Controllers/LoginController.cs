@@ -43,8 +43,22 @@ namespace DoAn.Controllers
         }
         public ActionResult Index()
         {
-            
-            return View();
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+                
+            }
+            catch
+            {
+                return View();
+            }
+            return RedirectToAction("Index","Home");
             //ViewBag.UserName = Convert.ToString(Session["UserName"]);
         }
 
