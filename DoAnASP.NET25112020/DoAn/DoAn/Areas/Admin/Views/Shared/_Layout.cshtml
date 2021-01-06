@@ -4,12 +4,38 @@
 <head>
     @await Html.PartialAsync("CSSPartial.cshtml")
     @RenderSection("css", required: false)
-
+    <style>
+        #getWeather:hover {
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
     @await Html.PartialAsync("_HeaderPartial.cshtml")
     @RenderBody()
     @await Html.PartialAsync("_FooterPartial.cshtml")
+    <script>
+        $("#getWeather").click(function () {
+            $.ajax({
+                url: '../../api/WeatherAPI/GetWeatherCurrent',
+                method: "GET",
+                success: function (data) {
+
+
+                    var result = JSON.parse(data);
+
+                    $('#addressWeather').html(result.name);
+                    $('#currentWeather').html(result.weather[0].description);
+                    $('#imgWeather').html('<img src="/icon-weather/' + result.weather[0].icon + '.png" />');
+                    $('#celsius').html((result.main.temp - 273.15) + "&#8451;") @*chuyen tu do K sang do C*@
+
+
+                    $('#form-modal-weather').modal('show');
+                },
+            });
+        });
+
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

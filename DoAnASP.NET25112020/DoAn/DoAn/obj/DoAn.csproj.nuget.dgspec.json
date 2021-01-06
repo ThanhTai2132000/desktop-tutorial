@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[3.2.11, )"
             },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"

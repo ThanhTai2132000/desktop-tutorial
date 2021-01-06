@@ -21,6 +21,30 @@
             <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
         </div>
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="form-modal-weather" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="width:300px">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div style="text-align: center" id="imgWeather"></div>
+                    <div style="text-align: center"><b>Địa điểm:</b> <span id="addressWeather"></span></div>
+                    <div style="text-align: center"><b>Thời tiết hiện tại:</b> <span id="currentWeather"></span></div>
+                    <div style="text-align: center"><b>Nhiệt độ:</b></div>
+                    <div style="text-align:center; font-size:4vw;" id="celsius"></div>
+                </div>
+                <div class="modal-footer" style="display:initial;">
+                    <center><button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button></center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div id="main">
         <nav class="navbar navbar-header navbar-expand navbar-light">
             <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
@@ -30,6 +54,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                    
+                    <li id="getWeather"><img style="width:3vw; height:3vw;" src="~/icon-weather/unknown.png" /></li>
                     <li class="dropdown nav-icon">
                         <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
                             <div class="d-lg-inline-block">
@@ -81,3 +107,7 @@
             </div>
         </nav>
         <div style="margin: 2vw;">
+
+
+    
+
