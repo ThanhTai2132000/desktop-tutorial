@@ -414,8 +414,22 @@
                             <div>
                             </div>
                         </div>
+                        @if (ViewBag.account != null)
+                        {
+                            <div style="display: inline; float: right; color: white; text-align: center; padding: 29px; ">
+                                Xin chào, @ViewBag.account
+                                <span>
+                                    
+                                    <button onclick="location.href='@Url.Action("Logout","Login")'" style=" margin-left: 5px; background: #303125; border: none; color: red; ">Logout</button>
+                                </span>
+                            </div>
+                        }
+
                         <div class="account-and-cart">
-                            <a href="@Url.Action("Index","Login")"><div class="my-account"></div></a> 
+                            @if (ViewBag.account == null) {
+                            <a href="@Url.Action("Index","Login")"><div class="my-account"></div></a>
+                            } 
+                            
                             <div class="box-cart">
                                 <div class="cart-mini">
                                     <div class="title">
@@ -432,7 +446,7 @@
                                                     foreach (var datacart in dataCart)
                                                     {
 
-                                                        
+
                                                         <li class="item" style="padding: 0; margin-bottom:1vw;">
                                                             <div style="height:6vw;">
                                                                 <div style="width: 6vw; height: 100%; display:inline-block;"><img style="width:100%; height:100%" src="~/ImgDienThoai/@datacart.DienThoai.Hinh" alt="Alternate Text" /></div>
@@ -441,19 +455,19 @@
 
                                                                     <div>Giá: <span style="color:orangered">@datacart.DienThoai.DonGia</span> </div>
                                                                 </div>
-                                                            
+
                                                             </div>
-                                                        
+
 
                                                         </li>
                                                     }
                                                 }
                                             </ol>
-                                            
+
                                             <div class="actions">
                                                 <div class="a-inner">
                                                     @Html.ActionLink("View My Cart", "ListCart", "Cart", null, new { @class = "btn-mycart" })
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>

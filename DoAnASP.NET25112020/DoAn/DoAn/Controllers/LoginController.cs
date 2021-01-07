@@ -61,6 +61,11 @@ namespace DoAn.Controllers
             return RedirectToAction("Index","Home");
             //ViewBag.UserName = Convert.ToString(Session["UserName"]);
         }
+        public ActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
+        }
 
         //[HttpPost, ValidateJsonAntiForgeryToken]
         //public JsonResult Login(string name, string email)

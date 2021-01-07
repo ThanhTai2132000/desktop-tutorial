@@ -29,6 +29,21 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+                
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
             /*JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
             TaiKhoanModel TK = new TaiKhoanModel();
             TK.TenTK = us.SelectToken("TenTK").ToString();
@@ -38,7 +53,25 @@ namespace WebApplication1.Controllers
         }
         public IActionResult List(string? id)
         {
-         
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+
+
+
             ViewBag.DongDienThoai = _context.DongDienThoai.ToList(); 
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
@@ -46,6 +79,26 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Grid(string? id)
         {
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+
+
+
+
             ViewBag.DongDienThoai = _context.DongDienThoai.ToList();
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
@@ -53,6 +106,26 @@ namespace WebApplication1.Controllers
         }
         public  async Task <IActionResult> Details(int? id)
         {
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+
+
+
+
             if (id == null)
             {
                 return NotFound();
