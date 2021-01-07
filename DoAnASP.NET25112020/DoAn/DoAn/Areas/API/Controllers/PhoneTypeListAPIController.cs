@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace DoAn.Areas.API
+namespace DoAn.Areas.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
