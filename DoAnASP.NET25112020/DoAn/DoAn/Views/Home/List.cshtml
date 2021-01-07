@@ -26,18 +26,19 @@
                         </div>
                         <div>
                             <ul>
-                                @foreach (var item in ViewBag.DongDienThoai)
+                                @if (ViewBag.DongDienThoai != null)
                                 {
+                                    @foreach (var item in ViewBag.DongDienThoai)
+                                    {
 
-                                    <li style="padding:10px">
-                                        @Html.ActionLink((string)item.TenDongDT, "Grid", "Home", new { id = item.MaDT })
-                                    </li>
+                                        <li style="padding:10px">
+                                            @Html.ActionLink((string)item.TenDongDT, "Grid", "Home", new { id = item.MaDT })
+                                        </li>
 
-                                    @*<a id="tab1" class="tab-accordion accordion-close">Apple</a>
-                    <a id="tab11" class="tab-accordion accordion-open">Samsung</a>
-                    <a id="tab12" class="tab-accordion accordion-close">HTC</a>
-                    <a id="tab13" class="tab-accordion accordion-close">Blackberry</a>*@
+                                    }
                                 }
+
+
                             </ul>
                         </div>
                         <div class="block-title-shop-by">

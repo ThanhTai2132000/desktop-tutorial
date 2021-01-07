@@ -15,28 +15,28 @@
     <title>Login V4</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="icon" type="image/png" href="~/login/images/icons/favicon.ico" />
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/vendor/bootstrap/css/bootstrap.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/fonts/iconic/css/material-design-iconic-font.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/vendor/animate/animate.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/vendor/css-hamburgers/hamburgers.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/vendor/animsition/css/animsition.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/vendor/select2/select2.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/vendor/daterangepicker/daterangepicker.css">
-    
+
     <link rel="stylesheet" type="text/css" href="~/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/login/css/main.css">
-    
+
 </head>
 <body>
 
@@ -97,31 +97,21 @@
                 </div>
 
                 <div class="flex-c-m">
-                    @*<a href="~/login/#" class="login100-social-item bg1">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-
-                    <a href="~/login/#" class="login100-social-item bg2">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-
-                    <a href="~/login/#" class="login100-social-item bg3">
-                        <i class="fa fa-google"></i>
-                    </a>*@
+                    
                     <!--Login FB-->
                     <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
-                    <p id="demo"></p>
+                    
                     <!--End Login FB-->
                 </div>
 
-                
+
 
             </div>
         </div>
     </div>
 
 
-    <div id="dropDownSelect1"></div>
+
 
 
     <script src="~/login/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -143,75 +133,63 @@
 
 
 
-    
-        <!------------------------------------------------------------------------------------------------------------>
-        <!--Tải và khởi chạy JavaScript SDK trong trang HTML-->
-        <script>
-            function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-                console.log('statusChangeCallback');
-                console.log(response);                   // The current login status of the person.
-                if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-                    testAPI();
-                } else {                                 // Not logged into your webpage or we are unable to tell.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                        'into this webpage.';
-                }
+
+    <!------------------------------------------------------------------------------------------------------------>
+    <!--Tải và khởi chạy JavaScript SDK trong trang HTML-->
+    <script>
+        function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+            console.log('statusChangeCallback');
+            console.log(response);                   // The current login status of the person.
+            if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+                testAPI();
+            } else {                                 // Not logged into your webpage or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this webpage.';
             }
+        }
 
 
-            function checkLoginState() {               // Called when a person is finished with the Login Button.
-                FB.getLoginStatus(function (response) {   // See the onlogin handler
-                    statusChangeCallback(response);
-                });
-            }
+        function checkLoginState() {               // Called when a person is finished with the Login Button.
+            FB.getLoginStatus(function (response) {   // See the onlogin handler
+                statusChangeCallback(response);
+            });
+        }
 
 
-            window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '444705446538678',
-                    cookie: true,                     // Enable cookies to allow the server to access the session.
-                    xfbml: true,                     // Parse social plugins on this webpage.
-                    version: 'v9.0'           // Use this Graph API version for this call.
-                });
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '444705446538678',
+                cookie: true,                     // Enable cookies to allow the server to access the session.
+                xfbml: true,                     // Parse social plugins on this webpage.
+                version: 'v9.0'           // Use this Graph API version for this call.
+            });
 
 
-                FB.getLoginStatus(function (response) {   // Called after the JS SDK has been initialized.
-                    statusChangeCallback(response);        // Returns the login status.
-                });
-            };
+            FB.getLoginStatus(function (response) {   // Called after the JS SDK has been initialized.
+                statusChangeCallback(response);        // Returns the login status.
+            });
+        };
 
-            function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-                console.log('Welcome!  Fetching your information.... ');
-                FB.api('/me', function (response) {
-                    console.log('Successful login for: ' + response.name);
-                    document.getElementById('status').innerHTML =
-                        'Thanks for logging in, ' + response.name + '!';
-                });
-            }
-        </script>
+        function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+                console.log('Successful login for: ' + response.name);
+                document.getElementById('status').innerHTML =
+                    'Thanks for logging in, ' + response.name + '!';
+            });
+        }
+    </script>
 
-
-        <!-- The JS SDK Login Button -->
-
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-        </fb:login-button>
-
-        <div id="status">
-        </div>
-
-        <!-- Load the JS SDK asynchronously -->
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <!-- Load the JS SDK asynchronously -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
     <!--JavaScript SDK FB-->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=444705446538678&autoLogAppEvents=1" nonce="94VAP1Hg">
-    </script>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=444705446538678&autoLogAppEvents=1" nonce="CKhi81FO"></script>
     <!--End tải và khởi chạy JavaScript SDK trong trang HTML-->
     <!------------------------------------------------------------------------------------------------------------>
     <!--Kiểm tra tài khoản và mật khẩu rỗng-->
-
-
-        <script>
+    <script>
             function Login() {
             var username = $("#UserName").val();
             var pass = $("#Password").val();
@@ -259,9 +237,9 @@
                 }
 
             }
-        </script>
 
 
+    </script>
     
 
 </body>
@@ -269,18 +247,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-@*<input class="form-control" type="text" id="UserName" name="UserName" placeholder="User Name" />
-<input class="form-control" type="password" id="Password" name="Password" placeholder="Password" />
-<button class="btn btn-primary" onclick="Login()" name="abc" value="submit" style="margin-top: -23px;height: 39px">Login</button>*@
 
 
 

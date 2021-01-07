@@ -94,7 +94,6 @@
 
     @*Hiện list điện thoại bằng JSON và API*@
     <script>
-
         $(document).ready(function () {
             $.ajax({
                 method: "GET",
@@ -116,7 +115,6 @@
                         data += '<a href="/Admin/DienThoai/Delete/' + value.ID + '">Delete</a>';
                         data += '</td>';
                         data += '</tr>';
-
                     });
                     $('#list-dt').append(data);
                 }
@@ -124,7 +122,6 @@
             });
 
         });
-
     </script>
 
 }

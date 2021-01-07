@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace DoAn
 {
@@ -25,10 +26,16 @@ namespace DoAn
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddAuthentication().AddFacebook(facebookOptions =>
+            //{
+            //    facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+            //    facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            //});
+
             services.AddControllersWithViews();
             services.AddDbContext<DPContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DPContext")));
-
+            //Khai báo Session 
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(600);

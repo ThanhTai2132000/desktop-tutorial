@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\_ViewImports.cshtml"
+#line 1 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\_ViewImports.cshtml"
 using DoAn;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\_ViewImports.cshtml"
+#line 2 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\_ViewImports.cshtml"
 using DoAn.Areas.Admin.Models;
 
 #line default
@@ -35,7 +35,7 @@ using DoAn.Areas.Admin.Models;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 3 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
   
     ViewData["Title"] = "Index";
 
@@ -46,7 +46,7 @@ using DoAn.Areas.Admin.Models;
             BeginWriteAttribute("onclick", " onclick=\"", 355, "\"", 444, 3);
             WriteAttributeValue("", 365, "showInPopUp(\'", 365, 13, true);
 #nullable restore
-#line 12 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 12 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
 WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Request.Scheme), 378, 61, false);
 
 #line default
@@ -56,7 +56,7 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
             EndWriteAttribute();
             WriteLiteral(">Create New</a>\r\n<table class=\"table\">\r\n    <thead>\r\n        <tr>\r\n            <th>\r\n                ");
 #nullable restore
-#line 17 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 17 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.TenDT));
 
 #line default
@@ -64,7 +64,7 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
-#line 20 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 20 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.DongDT));
 
 #line default
@@ -72,7 +72,7 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
-#line 23 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 23 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Hinh));
 
 #line default
@@ -80,7 +80,7 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
-#line 26 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 26 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.DonGia));
 
 #line default
@@ -88,7 +88,7 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
-#line 29 "D:\HocTap\Đồ Án ASP.Net\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
+#line 29 "D:\Nam3-HK1\ASP.NET\DoAnDuPhong\desktop-tutorial\DoAnASP.NET25112020\DoAn\DoAn\Areas\Admin\Views\DienThoai\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.GiaKM));
 
 #line default
@@ -134,7 +134,6 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
 
 ");
                 WriteLiteral(@"    <script>
-
         $(document).ready(function () {
             $.ajax({
                 method: ""GET"",
@@ -153,11 +152,10 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
                         data += '<td>';
                         data += '<a href=""/Admin/DienThoai/Edit/' + value.ID + '"">Edit</a> |';
                         data += '<a href=""/Admin/DienThoai/Details/' + value.ID + '"">Details</a> |';
-                        data += '<a href=""/");
-                WriteLiteral(@"Admin/DienThoai/Delete/' + value.ID + '"">Delete</a>';
+                        data += '<a href=""/A");
+                WriteLiteral(@"dmin/DienThoai/Delete/' + value.ID + '"">Delete</a>';
                         data += '</td>';
                         data += '</tr>';
-
                     });
                     $('#list-dt').append(data);
                 }
@@ -165,7 +163,6 @@ WriteAttributeValue("", 378, Url.Action("Create","DienThoai",null,Context.Reques
             });
 
         });
-
     </script>
 
 ");

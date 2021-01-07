@@ -8,9 +8,13 @@ using Microsoft.Extensions.Logging;
 using DoAn.Models;
 using DoAn.Areas.Admin.Data;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Http;
+using DoAn.Areas.Admin.Models;
 using Microsoft.AspNetCore.Http;
 using DoAn.Areas.Admin.Models;
 using Newtonsoft.Json;
+
 
 namespace WebApplication1.Controllers
 {
@@ -25,11 +29,49 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+                
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+            /*JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+            TaiKhoanModel TK = new TaiKhoanModel();
+            TK.TenTK = us.SelectToken("TenTK").ToString();
+            TK.MatKhau = us.SelectToken("MatKhau").ToString();
+            TK.LoaiTK = Int32.Parse(us.SelectToken("LoaiTK").ToString());*/
+            return View(/*TK*/);
         }
         public IActionResult List(string? id)
         {
-         
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+
+
+
             ViewBag.DongDienThoai = _context.DongDienThoai.ToList(); 
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
@@ -37,6 +79,26 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Grid(string? id)
         {
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+
+
+
+
             ViewBag.DongDienThoai = _context.DongDienThoai.ToList();
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
@@ -44,6 +106,26 @@ namespace WebApplication1.Controllers
         }
         public  async Task <IActionResult> Details(int? id)
         {
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
+
+
+
+
             if (id == null)
             {
                 return NotFound();

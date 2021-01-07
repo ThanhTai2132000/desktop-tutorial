@@ -35,9 +35,6 @@ namespace DoAn.Areas.Admin.Controllers
             {
                 return View("../Shared/Error");
             }
-
-
-
             /*var dPContext = _context.DienThoai.Include(d => d.DongDT);*/
             return View(/*await dPContext.ToListAsync()*/);
         }
