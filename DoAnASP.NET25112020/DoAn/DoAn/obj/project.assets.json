@@ -9321,11 +9321,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Nam3-HK1\\ASP.NET\\DoAnDuPhong\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+      "projectUniqueName": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
       "projectName": "DoAn",
-      "projectPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnDuPhong\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
+      "projectPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\DoAn.csproj",
       "packagesPath": "C:\\Users\\lehuu\\.nuget\\packages\\",
-      "outputPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnDuPhong\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\",
+      "outputPath": "D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lehuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9428,7 +9428,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\HocTap\\Đồ Án ASP.Net\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file D:\\Nam3-HK1\\ASP.NET\\DoAnASP.NET\\desktop-tutorial\\DoAnASP.NET25112020\\DoAn\\DoAn\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     },
     {
       "code": "NU1701",

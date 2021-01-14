@@ -85,6 +85,22 @@ namespace DoAn.Controllers
         }
         public IActionResult ListCart()
         {
+            JObject acc;
+            try
+            {
+                if (HttpContext.Session.GetString("account") != null)
+                {
+                    acc = JObject.Parse(HttpContext.Session.GetString("account"));
+                }
+                else acc = JObject.Parse(HttpContext.Session.GetString("accountuser"));
+
+                ViewBag.account = acc.SelectToken("TenTK").ToString();
+
+            }
+            catch
+            {
+                ViewBag.account = null;
+            }
             var cart = HttpContext.Session.GetString("cart");//get key cart
             if (cart != null)
             {
