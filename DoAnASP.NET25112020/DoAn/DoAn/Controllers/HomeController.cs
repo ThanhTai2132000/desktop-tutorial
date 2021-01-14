@@ -75,6 +75,14 @@ namespace WebApplication1.Controllers
             ViewBag.DongDienThoai = _context.DongDienThoai.ToList(); 
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
+
+            var tenloai = _context.DongDienThoai.FirstOrDefault(n => n.MaDT.Equals(id));
+            if (id != null)
+            {
+                ViewBag.TenLoaiDT = tenloai.TenDongDT;
+                ViewBag.LoaiDT = tenloai.MaDT;
+            }
+            else ViewBag.TenLoaiDT = null;
             return View(list.ToList());
         }
         public IActionResult Grid(string? id)
@@ -102,6 +110,17 @@ namespace WebApplication1.Controllers
             ViewBag.DongDienThoai = _context.DongDienThoai.ToList();
             var list = from m in _context.DienThoai select m;
             if (id != null) list = list.Where(m => m.MaDongDT.Contains(id));
+
+
+
+            var tenloai = _context.DongDienThoai.FirstOrDefault(n => n.MaDT.Equals(id));
+            if (id != null)
+            { 
+                ViewBag.TenLoaiDT = tenloai.TenDongDT;
+                ViewBag.LoaiDT = tenloai.MaDT;
+            }
+            else ViewBag.TenLoaiDT = null;
+
             return View(list.ToList());
         }
         public  async Task <IActionResult> Details(int? id)

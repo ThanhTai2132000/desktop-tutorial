@@ -1,1107 +1,199 @@
 ﻿@model List<DoAn.Areas.Admin.Models.DienThoaiModel>
-<!--begin content-->
-<div class="content">
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <ul>
-                    <li class="home">
-                        <a href="home-01.html" title="Go to Home Page">Home</a>
-                        <span>|</span>
-                    </li>
-                    <li class="category3">
-                        <strong>Mobile</strong>
-                    </li>
-                </ul>
+    <div class="content">
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <ul>
+                        <li class="home">
+                            @Html.ActionLink("Home", "Index", "Home")
+                            <span>|</span>
+                        </li>
+                        <li class="category3">
+                            <strong>Mobile</strong>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
+        <div class="container">
             <div class="row">
-                <div id="box-left" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                    <div class="block block-layered-nav">
-                        <div class="block-title">
-                            <strong><span>Mobile</span></strong>
+                <div class="row">
+                    <partial name="LeftContentPartial"/>
+                    <div id="main" class="col-lg-9 col-md-9 col-sm-8 col-xs-12 col-main">
+                        <div class="wrap-banner-cate">
+                            <a class="cate-img" href="#"><img src="~/template/images/banner-2.png" alt="" /></a>
                         </div>
-                            <div>
-                                    <ul>
-                                        @foreach (var item in ViewBag.DongDienThoai)
-                                        {
-
-                                            <li style="padding:10px">
-                                                @Html.ActionLink((string)item.TenDongDT, "Grid", "Home", new { id = item.MaDT })
-                                            </li>
-
-                                            @*<a id="tab1" class="tab-accordion accordion-close">Apple</a>
-                            <a id="tab11" class="tab-accordion accordion-open">Samsung</a>
-                            <a id="tab12" class="tab-accordion accordion-close">HTC</a>
-                            <a id="tab13" class="tab-accordion accordion-close">Blackberry</a>*@
-                                        }
-                                    </ul>
-                            </div>
-                            <div class="block-title-shop-by">
-                                <strong><span>Shop by</span></strong>
-                            </div>
-                            <div class="block-content">
-                                <dl id="narrow-by-list">
-                                    <dt id="tab2" class="tab-accordion accordion-open"> Price</dt>
-                                    <dd class="tabcontent2">
-                                        <div class="price">
-                                            <div class="range-wrap">
-                                                <div id="slider-range"></div>
-                                            </div>
-                                            <div class="text-box">
-                                                <div class="price-from">
-                                                    $ <input type="text" name="min" id="minPrice" class="priceTextBox" value="400" />
-                                                </div><div class="price-to"> <input type="text" name="max" id="maxPrice" class="priceTextBox" value="1000" /></div>
-                                                <a class="go" href="javascript:void(0)">Fillter</a>
-                                                <input type="hidden" id="amount" readonly="readonly" style="background:none; border:none;" value="$400 - $1000" />
-                                            </div>
-                                        </div>
-                                    </dd>
-                                    <dt id="tab4" class="tab-accordion accordion-close">Color</dt>
-                                    <dd class="tabcontent4" style="display:none;">
-                                        <ol>
-                                            <li class='licolor'><a class='itemcolor colorwhite' href="grid.html?color=25">White_#ffffff</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#e66054' href="grid.html?color=8">Blue _#e66054</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#d0b7cc' href="grid.html?color=10">Green_#d0b7cc</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#107a8e' href="grid.html?color=9">Yellow _#107a8e</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#a7bc93' href="grid.html?color=24">Pink_#a7bc93</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#d3b627' href="grid.html?color=23">Lightblue_#d3b627</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#b4b3ae' href="grid.html?color=22">Gray_#b4b3ae</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#502006' href="grid.html?color=21">Red_#502006</a></li>
-                                            <li class='licolor'><a class='itemcolor' style='background:#311e21' href="grid.html?color=20">violet_#311e21</a></li>
-                                        </ol>
-                                    </dd>
-                                    <dt id="tab3" class="tab-accordion accordion-open">Manufacturer</dt>
-                                    <dd class="tabcontent3">
-                                        <ol>
-                                            <li><a href="grid.html?manufacturer=11">Apple </a>(2)</li>
-                                            <li> <a href="grid.html?manufacturer=13">Samsung</a>(5) </li>
-                                            <li><a href="grid.html?manufacturer=14">HTC</a>(3) </li>
-                                            <li><a href="grid.html?manufacturer=12">Blackberry</a>(2) </li>
-                                        </ol>
-                                    </dd>
-
-                                    <dt id="tab5" class="tab-accordion accordion-close">Size</dt>
-                                    <dd class="tabcontent5" style="display:none;">
-                                        <ol>
-                                            <li class="size"><a href="grid.html?size=4">L</a></li>
-                                            <li class="size"><a href="grid.html?size=3">S</a></li>
-                                            <li class="size"><a href="grid.html?size=5">X</a></li>
-                                            <li class="size"><a href="grid.html?size=6">XL</a></li>
-                                        </ol>
-                                    </dd>
-
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="block block-compare">
-                            <div class="block-title">
-                                <strong><span>COMPARE PRODUCTS (2)</span></strong>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li><a href="detail.html">Ipad Air and iOS7</a></li>
-                                    <li><a href="detail.html">Ipad Air and iOS7</a></li>
-                                </ul>
-                            </div>
-                            <div class="actions">
-                                <a class="btn-clear" href="#">
-                                    Clear all
-                                </a>
-                                @*<a class="go-compare" href="#">
-                    COMPARE
-                </a>*@
-                            </div>
+                        <div class="page-title category-title">
+                            @if (ViewBag.TenLoaiDT != null)
+                            {
+                                <h1>@ViewBag.TenLoaiDT</h1>
+                            }
+                            else
+                            {
+                                <h1>Danh sách điện thoại</h1>
+                            }
 
                         </div>
-                        <div class="block box-banner">
-                            <div id="box-banner" class="carousel slide" data-ride="carousel" data-interval="1500">
-                                <ol class="carousel-indicators">
-                                    <li class="active" data-target="#box-banner" data-slide-to="0"></li>
-                                    <li data-target="#box-banner" data-slide-to="1"></li>
-                                    <li data-target="#box-banner" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <a href="detail.html"><img src="~/template/images/banner13.png" alt="banner" /></a>
-                                        <div class="std">
-                                            <span class="t1">up to 45%</span>
-                                            <span class="t2">Nokia Lumia 920</span>
-                                            <span class="t3">At verov eos et accusamus et iusto ods un dignissimos ducimus qui blan ditiis prasixer esentium</span>
-                                        </div>
-                                        <a class="gt-shop" href="#">Shop Now</a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="detail.html"><img src="~/template/images/banner14.png" alt="banner" /></a>
-                                        <div class="std">
-                                            <span class="t1">up to 50%</span>
-                                            <span class="t2">Nokia Lumia 920</span>
-                                            <span class="t3">At verov eos et accusamus et iusto ods un dignissimos ducimus qui blan ditiis prasixer esentium</span>
-                                        </div>
-                                        <a class="gt-shop" href="#">Shop Now</a>
-
-                                    </div>
-                                    <div class="item">
-                                        <a href="detail.html"><img src="~/template/images/banner15.png" alt="banner" /></a>
-                                        <div class="std">
-                                            <span class="t1">up to 80%</span>
-                                            <span class="t2">Nokia Lumia 920</span>
-                                            <span class="t3">At verov eos et accusamus et iusto ods un dignissimos ducimus qui blan ditiis prasixer esentium</span>
-                                        </div>
-                                        <a class="gt-shop" href="#">Shop Now</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <div id="main" class="col-lg-9 col-md-9 col-sm-8 col-xs-12 col-main">
-                    <div class="wrap-banner-cate">
-                        <a class="cate-img" href="#"><img src="~/template/images/banner-2.png" alt="" /></a>
-                    </div>
-                    <div class="page-title category-title">
-                        <h1>Mobile</h1>
-                    </div>
-                    <div id="catalog-listing">
-                        <div class="category-products page-product-list">
-                            <div class="toolbar-top">
-                                <div class="toolbar">
-                                    <div class="pager">
-                                        <div class="pages">
-                                            <strong>Pages</strong>
-                                            <ol>
-                                                <li class="current">1</li>
-                                                <li><a href="grid.html?p=2">2</a></li>
-                                                <li>
-                                                    <a class="next" href="grid.html?p=2" title="Next">
-                                                        &nbsp;
-                                                    </a>
-                                                </li>
-                                            </ol>
-                                        </div>
-                                        <!--<label class="item-pp"></label>-->
-                                    </div>
-                                    <div class="sorter">
-                                        <label>View as</label>
-                                        <p class="view-mode">
-                                            <strong title="Grid" class="grid">Grid</strong>
-                                            <a href="@Url.Action("List","Home")" title="List" class="list">List</a>
-                                        </p>
-                                        <div class="sort-by">
-                                            <label>Sort By</label>
-                                            <div class="wrap-sb">
-                                                <div class="selected-order"></div>
-                                                <ul class="select-order">
-                                                    <li><a href="grid.html?dir=asc&amp;order=position" class="selected">Position</a></li>
-                                                    <li><a href="grid.html?dir=asc&amp;order=name">Name</a></li>
-                                                    <li><a href="grid.html?dir=asc&amp;order=price">Price</a></li>
-                                                </ul>
+                        <div id="catalog-listing">
+                            <div class="category-products page-product-list">
+                                <div class="toolbar-top">
+                                    <div class="toolbar">
+                                        <div class="pager">
+                                            <div class="pages">
+                                                <strong>Pages</strong>
+                                                <ol>
+                                                    <li class="current">1</li>
+                                                    <li><a href="grid.html?p=2">2</a></li>
+                                                    <li>
+                                                        <a class="next" href="grid.html?p=2" title="Next">
+                                                            &nbsp;
+                                                        </a>
+                                                    </li>
+                                                </ol>
                                             </div>
-                                            <a class="desc" href="grid.html?dir=desc&amp;order=position" title="Set Descending Direction">
-                                                <!--<img src="~/template/" alt="" class="v-middle" />-->
-                                            </a>
+                                            <label class="item-pp"></label>
                                         </div>
-                                        <div class="limiter">
-                                            <label>Show</label>
-                                            <div class="wrap-show">
-                                                <div class="selected-limiter"></div>
-                                                <ul class="select-limiter">
-                                                    <li><a href="grid.html?limit=9" class="selected">9</a></li>
-                                                    <li><a href="grid.html?limit=12">12</a></li>
-                                                    <li><a href="grid.html?limit=24">24</a></li>
-                                                    <li><a href="grid.html?limit=36">36</a></li>
-                                                </ul>
-                                            </div>
-                                            <label class="stylepp">per page</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <ul class="products-grid row">
-
-                                @foreach (var item in Model)
-                                {
-
-                                    <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                        <div class="item-wrap">
-                                            <div class="item-image">
-                                                <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                    <img class="first_image" src="~/ImgDienThoai/@Html.DisplayFor(modelItem => item.Hinh)" alt="Product demo" />
+                                        <div class="sorter">
+                                            <label>View as</label>
+                                            <p class="view-mode">
+                                                <strong title="Grid" class="grid">Grid</strong>
+                                                <a href="@Url.Action("List","Home",new {id = ViewBag.LoaiDT})" title="List" class="list">List</a>
+                                            </p>
+                                            <div class="sort-by">
+                                                <label>Sort By</label>
+                                                <div class="wrap-sb">
+                                                    <div class="selected-order"></div>
+                                                    <ul class="select-order">
+                                                        <li><a href="grid.html?dir=asc&amp;order=position" class="selected">Position</a></li>
+                                                        <li><a href="grid.html?dir=asc&amp;order=name">Name</a></li>
+                                                        <li><a href="grid.html?dir=asc&amp;order=price">Price</a></li>
+                                                    </ul>
+                                                </div>
+                                                <a class="desc" href="grid.html?dir=desc&amp;order=position" title="Set Descending Direction">
+                                                    <!--<img src="~/template/" alt="" class="v-middle" />-->
                                                 </a>
-                                                <div class="item-btn">
-                                                    <div class="box-inner">
-                                                        <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                        <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                        <span class="qview">
-                                                            <a href="detail.html"></a>
-                                                            <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                        </span>
-                                                    </div>
+                                            </div>
+                                            <div class="limiter">
+                                                <label>Show</label>
+                                                <div class="wrap-show">
+                                                    <div class="selected-limiter"></div>
+                                                    <ul class="select-limiter">
+                                                        <li><a href="grid.html?limit=9" class="selected">9</a></li>
+                                                        <li><a href="grid.html?limit=12">12</a></li>
+                                                        <li><a href="grid.html?limit=24">24</a></li>
+                                                        <li><a href="grid.html?limit=36">36</a></li>
+                                                    </ul>
                                                 </div>
-                                                <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
+                                                <label class="stylepp">per page</label>
                                             </div>
-                                            <div class="pro-info">
-                                                <div class="pro-inner">
-                                                    <div class="pro-title product-name"><a href="detail.html">@Html.DisplayFor(modelItem => item.TenDT)</a></div>
-                                                    <div class="pro-content">
-                                                        <div class="wrap-price">
-                                                            <div class="price-box">
-                                                                <span class="regular-price">
-                                                                    <span class="price">@Html.DisplayFor(modelItem => item.DonGia)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ratings">
-                                                            <div class="rating-box">
-                                                                <div class="rating" style="width:80%"></div>
-                                                            </div>
-                                                            <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--end item wrap -->
-                                    </li>
-
-                                }
-
-                                <!--<li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo2.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo3.jpg#" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo4.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo5.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo6.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo7.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo8.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo9.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo10.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo11.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo12.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo1.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo2.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo3.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo4.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo5.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo6.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo7.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>
-                                <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
-                                    <div class="item-wrap">
-                                        <div class="item-image">
-                                            <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
-                                                <img class="first_image" src="~/template/images/product/larg/demo8.jpg" alt="Product demo" />
-                                            </a>
-                                            <div class="item-btn">
-                                                <div class="box-inner">
-                                                    <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
-                                                    <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
-                                                    <span class="qview">
-                                                        <a href="detail.html"></a>
-                                                        <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
-                                        </div>
-                                        <div class="pro-info">
-                                            <div class="pro-inner">
-                                                <div class="pro-title product-name"><a href="detail.html">Ipad Air and iOS7</a></div>
-                                                <div class="pro-content">
-                                                    <div class="wrap-price">
-                                                        <div class="price-box">
-                                                            <span class="regular-price">
-                                                                <span class="price">$800.00</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ratings">
-                                                        <div class="rating-box">
-                                                            <div class="rating" style="width:80%"></div>
-                                                        </div>
-                                                        <span class="amount"><a href="detail.html">1(s)</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                <!--end item wrap -->
-                                <!--</li>-->
-                            </ul>
-                            <div class="toolbar-bottom">
-                                <div class="toolbar">
-                                    <div class="pager">
-                                        <div class="pages">
-                                            <strong>Pages</strong>
-                                            <ol>
-                                                <li class="current">1</li>
-                                                <li><a href="grid.html?p=2">2</a></li>
-                                                <li>
-                                                    <a class="next" href="grid.html?p=2" title="Next">
-                                                        &nbsp;
-                                                    </a>
-                                                </li>
-                                            </ol>
-                                        </div>
-                                        <!--<label class="item-pp"></label>-->
-                                    </div>
-                                    <div class="sorter">
-                                        <label>View as</label>
-                                        <p class="view-mode">
-                                            <strong title="Grid" class="grid">Grid</strong>
-                                            <a href="grid.html?mode=list" title="List" class="list">List</a>
-                                        </p>
-                                        <div class="sort-by">
-                                            <label>Sort By</label>
-                                            <div class="wrap-sb">
-                                                <div class="selected-order"></div>
-                                                <ul class="select-order">
-                                                    <li><a href="grid.html?dir=asc&amp;order=position" class="selected">Position</a></li>
-                                                    <li><a href="grid.html?dir=asc&amp;order=name">Name</a></li>
-                                                    <li><a href="grid.html?dir=asc&amp;order=price">Price</a></li>
-                                                </ul>
-                                            </div>
-                                            <a class="desc" href="grid.html?dir=desc&amp;order=position" title="Set Descending Direction">
-                                                <!--<img src="~/template/" alt="" class="v-middle" />-->
-                                            </a>
-                                        </div>
-                                        <div class="limiter">
-                                            <label>Show</label>
-                                            <div class="wrap-show">
-                                                <div class="selected-limiter"></div>
-                                                <ul class="select-limiter">
-                                                    <li><a href="grid.html?limit=9" class="selected">9</a></li>
-                                                    <li><a href="grid.html?limit=12">12</a></li>
-                                                    <li><a href="grid.html?limit=24">24</a></li>
-                                                    <li><a href="grid.html?limit=36">36</a></li>
-                                                </ul>
-                                            </div>
-                                            <label class="stylepp">per page</label>
                                         </div>
                                     </div>
                                 </div>
+                                <ul class="products-grid row">
 
+                                    @foreach (var item in Model)
+                                    {
+
+                                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 item">
+                                            <div class="item-wrap">
+                                                <div class="item-image">
+                                                    <a class="product-image no-touch" href="#" title="Ipad Air and iOS7">
+                                                        <img class="first_image" src="~/ImgDienThoai/@Html.DisplayFor(modelItem => item.Hinh)" alt="Product demo" />
+                                                    </a>
+                                                    <div class="item-btn">
+                                                        <div class="box-inner">
+                                                            <a title="Add to wishlist" href="#" class="link-wishlist">&nbsp;</a>
+                                                            <a title="Add to compare" href="#" class="link-compare">&nbsp;</a>
+                                                            <span class="qview">
+                                                                <a href="detail.html"></a>
+                                                                <a class="vt_quickview_handler" data-original-title="Quick View" data-placement="left" data-toggle="tooltip" href="#"><span>Quick View</span></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <a title="Add to cart" class="btn-cart" href="#">&nbsp;</a>
+                                                </div>
+                                                <div class="pro-info">
+                                                    <div class="pro-inner">
+                                                        <div class="pro-title product-name"><a href="@Url.Action("Details", "Home", new { id = @item.ID })">@Html.DisplayFor(modelItem => item.TenDT)</a></div>
+                                                        <div class="pro-content">
+                                                            <div class="wrap-price">
+                                                                <div class="price-box">
+                                                                    <span class="regular-price">
+                                                                        <span class="price">@Html.DisplayFor(modelItem => item.DonGia)</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ratings">
+                                                                <div class="rating-box">
+                                                                    <div class="rating" style="width:80%"></div>
+                                                                </div>
+                                                                <span class="amount"><a href="detail.html">1(s)</a></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end item wrap -->
+                                        </li>
+
+                                    }
+
+
+                                </ul>
+                                <div class="toolbar-bottom">
+                                    <div class="toolbar">
+                                        <div class="pager">
+                                            <div class="pages">
+                                                <strong>Pages</strong>
+                                                <ol>
+                                                    <li class="current">1</li>
+                                                    <li><a href="grid.html?p=2">2</a></li>
+                                                    <li>
+                                                        <a class="next" href="grid.html?p=2" title="Next">
+                                                            &nbsp;
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                            <!--<label class="item-pp"></label>-->
+                                        </div>
+                                        <div class="sorter">
+                                            <label>View as</label>
+                                            <p class="view-mode">
+                                                <strong title="Grid" class="grid">Grid</strong>
+                                                <a href="grid.html?mode=list" title="List" class="list">List</a>
+                                            </p>
+                                            <div class="sort-by">
+                                                <label>Sort By</label>
+                                                <div class="wrap-sb">
+                                                    <div class="selected-order"></div>
+                                                    <ul class="select-order">
+                                                        <li><a href="grid.html?dir=asc&amp;order=position" class="selected">Position</a></li>
+                                                        <li><a href="grid.html?dir=asc&amp;order=name">Name</a></li>
+                                                        <li><a href="grid.html?dir=asc&amp;order=price">Price</a></li>
+                                                    </ul>
+                                                </div>
+                                                <a class="desc" href="grid.html?dir=desc&amp;order=position" title="Set Descending Direction">
+                                                    <!--<img src="~/template/" alt="" class="v-middle" />-->
+                                                </a>
+                                            </div>
+                                            <div class="limiter">
+                                                <label>Show</label>
+                                                <div class="wrap-show">
+                                                    <div class="selected-limiter"></div>
+                                                    <ul class="select-limiter">
+                                                        <li><a href="grid.html?limit=9" class="selected">9</a></li>
+                                                        <li><a href="grid.html?limit=12">12</a></li>
+                                                        <li><a href="grid.html?limit=24">24</a></li>
+                                                        <li><a href="grid.html?limit=36">36</a></li>
+                                                    </ul>
+                                                </div>
+                                                <label class="stylepp">per page</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1109,5 +201,4 @@
             </div>
         </div>
     </div>
-</div>
 <!--end content-->
