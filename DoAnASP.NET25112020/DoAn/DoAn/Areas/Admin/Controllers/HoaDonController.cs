@@ -71,51 +71,6 @@ namespace DoAn.Areas.Admin.Controllers
             return View(hoaDonModel);
         }
 
-        // GET: Admin/HoaDon/Create
-        public IActionResult Create()
-        {
-            try
-            {
-                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
-                ViewBag.account = acc.SelectToken("TenTK").ToString();
-            }
-            catch
-            {
-                return View("../Shared/Error");
-            }
-
-
-
-            return View();
-        }
-
-        // POST: Admin/HoaDon/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaHD,MaTK,NgayLapHD,TongTien")] HoaDonModel hoaDonModel)
-        {
-            try
-            {
-                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
-                ViewBag.account = acc.SelectToken("TenTK").ToString();
-            }
-            catch
-            {
-                return View("../Shared/Error");
-            }
-
-
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(hoaDonModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(hoaDonModel);
-        }
 
         // GET: Admin/HoaDon/Edit/5
         public async Task<IActionResult> Edit(string id)
