@@ -71,51 +71,7 @@ namespace DoAn.Areas.Admin.Controllers
             return View(chiTietHoaDonModel);
         }
 
-        // GET: Admin/ChiTietHoaDon/Create
-        public IActionResult Create()
-        {
-            try
-            {
-                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
-                ViewBag.account = acc.SelectToken("TenTK").ToString();
-            }
-            catch
-            {
-                return View("../Shared/Error");
-            }
-
-
-
-            return View();
-        }
-
-        // POST: Admin/ChiTietHoaDon/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,MaHoaDon,IDDienThoai,SoLuong,DonGia,GiaKhuyenMai")] ChiTietHoaDonModel chiTietHoaDonModel)
-        {
-            try
-            {
-                JObject acc = JObject.Parse(HttpContext.Session.GetString("account"));
-                ViewBag.account = acc.SelectToken("TenTK").ToString();
-            }
-            catch
-            {
-                return View("../Shared/Error");
-            }
-
-
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(chiTietHoaDonModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(chiTietHoaDonModel);
-        }
+        
 
         // GET: Admin/ChiTietHoaDon/Edit/5
         public async Task<IActionResult> Edit(int? id)
