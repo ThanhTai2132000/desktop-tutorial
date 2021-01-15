@@ -73,7 +73,7 @@
     </div>
 </div>
 @section Scripts {
-    @*Tìm kiếm realtime*@
+    
     <script>
         $(document).ready(function () {
             function Contains(txt_one, txt_two) {
@@ -93,7 +93,7 @@
 
 
     @*Hiện list điện thoại bằng JSON và API*@
-    <script>
+<script>
         $(document).ready(function () {
             $.ajax({
                 method: "GET",
@@ -106,7 +106,8 @@
                         data += '<tr class="result">';
                         data += '<td>' + value.TenDT + '</td>';
                         data += '<td>' + value.MaDT + '</td>';
-                        data += '<td>' + value.Hinh + '</td>';
+                        data += '<td> <img class="first_image" src="../ImgDienThoai/' + 
+                            value.Hinh + '" alt="My Download Product" /> </td>';
                         data += '<td>' + value.DonGia + '</td>';
                         data += '<td>' + value.GiaKM+ '</td>';
                         data += '<td>';
@@ -122,6 +123,6 @@
             });
 
         });
-    </script>
+</script>
 
 }

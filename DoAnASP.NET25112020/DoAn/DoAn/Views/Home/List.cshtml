@@ -205,3 +205,21 @@
     </div>
 </div>
 <!--end content-->
+
+@section Scripts {
+    <script>
+        $('#addCart').click(function () {
+            var idDT = $(this).data('id');
+            $.ajax({
+                url: "Cart/addCart",
+                data: idDT,
+                success: function (count) {
+                    alert(count);
+                }
+
+            })
+        });
+        
+    </script>
+
+}

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoAn.Migrations
 {
     [DbContext(typeof(DPContext))]
-    [Migration("20201221162526_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210115074422_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,32 +28,26 @@ namespace DoAn.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("DienThoaiID")
-                        .HasColumnType("int");
-
                     b.Property<float>("DonGia")
                         .HasColumnType("real");
 
                     b.Property<float>("GiaKhuyenMai")
                         .HasColumnType("real");
 
-                    b.Property<string>("HoaDonMaHD")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IDDienThoai")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IDDienThoai")
+                        .HasColumnType("int");
 
                     b.Property<string>("MaHoaDon")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("DienThoaiID");
+                    b.HasIndex("IDDienThoai");
 
-                    b.HasIndex("HoaDonMaHD");
+                    b.HasIndex("MaHoaDon");
 
                     b.ToTable("ChiTietHoaDon");
                 });
@@ -105,8 +99,8 @@ namespace DoAn.Migrations
                     b.Property<string>("MaHD")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("MaTK")
-                        .HasColumnType("int");
+                    b.Property<string>("MaTK")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("NgayLapHD")
                         .HasColumnType("datetime2");
@@ -115,6 +109,8 @@ namespace DoAn.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("MaHD");
+
+                    b.HasIndex("MaTK");
 
                     b.ToTable("HoaDon");
                 });
@@ -139,11 +135,13 @@ namespace DoAn.Migrations
                 {
                     b.HasOne("DoAn.Areas.Admin.Models.DienThoaiModel", "DienThoai")
                         .WithMany("listDTCoHoaDon")
-                        .HasForeignKey("DienThoaiID");
+                        .HasForeignKey("IDDienThoai")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("DoAn.Areas.Admin.Models.HoaDonModel", "HoaDon")
                         .WithMany("listChiTiet")
-                        .HasForeignKey("HoaDonMaHD");
+                        .HasForeignKey("MaHoaDon");
 
                     b.Navigation("DienThoai");
 
@@ -159,6 +157,15 @@ namespace DoAn.Migrations
                     b.Navigation("DongDT");
                 });
 
+            modelBuilder.Entity("DoAn.Areas.Admin.Models.HoaDonModel", b =>
+                {
+                    b.HasOne("DoAn.Areas.Admin.Models.TaiKhoanModel", "TaiKhoan")
+                        .WithMany("listHoaDon")
+                        .HasForeignKey("MaTK");
+
+                    b.Navigation("TaiKhoan");
+                });
+
             modelBuilder.Entity("DoAn.Areas.Admin.Models.DienThoaiModel", b =>
                 {
                     b.Navigation("listDTCoHoaDon");
@@ -172,6 +179,11 @@ namespace DoAn.Migrations
             modelBuilder.Entity("DoAn.Areas.Admin.Models.HoaDonModel", b =>
                 {
                     b.Navigation("listChiTiet");
+                });
+
+            modelBuilder.Entity("DoAn.Areas.Admin.Models.TaiKhoanModel", b =>
+                {
+                    b.Navigation("listHoaDon");
                 });
 #pragma warning restore 612, 618
         }

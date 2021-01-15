@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "ListCart";
     Layout = "~/Views/Shared/_Layout.cshtml";
+  
 }
+    
 <div class="container">
     <div class="list-cart">
         <table class="table" border="1">
@@ -50,28 +52,46 @@
             }
 
         </table>
+        <center><button onclick="ThanhToan()" class="btn btn-success">Thanh Toán</button></center>  
     </div>
 </div>
     @section Scripts {
 
         <script>
-    $(document).ready(function () {
-        $(".updateCart").click(function (event) {
-            event.preventDefault();
-            var quantity = $(".quantity_" + $(this).attr("data-id")).val();
-            console.log(quantity);
-            $.ajax({
-                type: "POST",
-                url:"@Url.Action("updateCart","Cart")",
-                data: {
-                    id: $(this).attr("data-id"),
-                    quantity:quantity
-                },
-                success: function (result) {
-                    window.location.href = '@Url.Action("ListCart","Cart")';
-                }
+            $(document).ready(function () {
+                $(".updateCart").click(function (event) {
+                    event.preventDefault();
+                    var quantity = $(".quantity_" + $(this).attr("data-id")).val();
+                    console.log(quantity);
+                    $.ajax({
+                        type: "POST",
+                        url:"@Url.Action("updateCart","Cart")",
+                        data: {
+                            id: $(this).attr("data-id"),
+                            quantity:quantity
+                        },
+                        success: function (result) {
+                            window.location.href = '@Url.Action("ListCart","Cart")';
+                        }
+                    });
+                });
             });
-        });
-    });
+        </script>
+
+        <script>
+            function ThanhToan() {
+                $.ajax({
+                    url: "../Cart/ThanhToan",
+                    
+                    success: function (res) {
+                        if (res == false) {
+                            alert("Không thể thực hiện thanh toán")
+                        } else {
+                            alert("Thanh toán thành công")
+                        }
+                        window.location.reload()
+                    }
+                });
+            }
         </script>
     }

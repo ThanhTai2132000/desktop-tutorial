@@ -96,6 +96,7 @@ namespace DoAn.Controllers
 
                 ViewBag.account = acc.SelectToken("TenTK").ToString();
 
+                
             }
             catch
             {
@@ -159,8 +160,129 @@ namespace DoAn.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<bool> ThanhToan()
+        {
+
+            int getHoaDon = _context.HoaDon.Count();
 
 
+            var acc = HttpContext.Session.GetString("account");
+
+            if (acc == null)
+            {
+                acc = HttpContext.Session.GetString("accountuser");
+            }
+
+            var cart = HttpContext.Session.GetString("cart");
+            if (cart == null || acc == null)
+            {
+
+                return false;
+            }
+            else if (cart != null && acc != null)
+            {
+                JObject TaiKhoanModel = JObject.Parse(acc);
+                string tentk = TaiKhoanModel.SelectToken("TenTK").ToString();
+                HoaDonModel hoadon = new HoaDonModel();
+
+
+                if (getHoaDon != 0)
+                {
+                    int idhoadon = int.Parse(_context.HoaDon.OrderBy(h => h.MaHD).Last().MaHD); //Lấy ID ở dòng cuối cùng trong bảng
+                    int nextID = ++idhoadon; //ID của dòng được thêm mới
+
+
+                    List<CartModel> dataCart = JsonConvert.DeserializeObject<List<CartModel>>(cart);
+                    float tongtien = 0;
+                    for (int i = 0; i < dataCart.Count; i++)
+                    {
+                        if (dataCart[i].DienThoai.GiaKM != 0)
+                            tongtien += dataCart[i].DienThoai.GiaKM * dataCart[i].Quantity;
+                        else tongtien += dataCart[i].DienThoai.DonGia * dataCart[i].Quantity;
+                    }
+
+                    //Thêm vào bảng HoaDon
+                    hoadon.MaHD = nextID.ToString();
+                    hoadon.MaTK = tentk;
+                    hoadon.NgayLapHD = DateTime.Now;
+                    hoadon.TongTien = tongtien;
+                    _context.Add(hoadon);
+                    await _context.SaveChangesAsync();
+                    
+
+
+
+                    //Thêm vào bảng ChiTietHoaDon
+
+                    ChiTietHoaDonModel chiTietHoaDon = new ChiTietHoaDonModel();
+
+                    for (int i = 0; i < dataCart.Count; i++)
+                    {
+                        chiTietHoaDon.MaHoaDon = nextID.ToString();
+                        chiTietHoaDon.IDDienThoai = dataCart[i].DienThoai.ID;
+                        chiTietHoaDon.SoLuong = dataCart[i].Quantity;
+                        chiTietHoaDon.DonGia = dataCart[i].DienThoai.DonGia;
+                        chiTietHoaDon.GiaKhuyenMai = dataCart[i].DienThoai.GiaKM;
+                        _context.Add(chiTietHoaDon);
+                        await _context.SaveChangesAsync();
+                        chiTietHoaDon = new ChiTietHoaDonModel();
+                    }
+                    
+                    
+
+                    HttpContext.Session.Remove("cart");
+                    return true;
+                }
+                else
+                {
+
+                    int nextID = 1;
+
+
+                    List<CartModel> dataCart = JsonConvert.DeserializeObject<List<CartModel>>(cart);
+                    float tongtien = 0;
+                    for (int i = 0; i < dataCart.Count; i++)
+                    {
+                        if (dataCart[i].DienThoai.GiaKM != 0)
+                            tongtien += dataCart[i].DienThoai.GiaKM * dataCart[i].Quantity;
+                        else tongtien += dataCart[i].DienThoai.DonGia * dataCart[i].Quantity;
+                    }
+
+                    hoadon.MaHD = nextID.ToString();
+                    hoadon.MaTK = tentk;
+                    hoadon.NgayLapHD = DateTime.Now;
+                    hoadon.TongTien = tongtien;
+                    _context.Add(hoadon);
+                    await _context.SaveChangesAsync();
+
+                    //Thêm vào bảng ChiTietHoaDon
+                    
+                    ChiTietHoaDonModel chiTietHoaDon = new ChiTietHoaDonModel();
+                    for (int i = 0; i < dataCart.Count; i++)
+                    {
+                        
+                        chiTietHoaDon.MaHoaDon = nextID.ToString();
+                        chiTietHoaDon.IDDienThoai = dataCart[i].DienThoai.ID;
+                        chiTietHoaDon.SoLuong = dataCart[i].Quantity;
+                        chiTietHoaDon.DonGia = dataCart[i].DienThoai.DonGia;
+                        chiTietHoaDon.GiaKhuyenMai = dataCart[i].DienThoai.GiaKM;
+                        _context.Add(chiTietHoaDon);
+                        await _context.SaveChangesAsync();
+                        chiTietHoaDon = new ChiTietHoaDonModel();
+                    }
+                    
+                    
+
+                    HttpContext.Session.Remove("cart");
+                    return true;
+                }
+
+
+
+            }
+            return false;
+
+        }
 
 
     }

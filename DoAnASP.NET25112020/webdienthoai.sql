@@ -1,4 +1,6 @@
-
+INSERT INTO TaiKhoan VALUES
+('Admin', '123',0),
+('User1', '123',1);
 
 --
 -- Dumping data for table dienthoai
@@ -46,9 +48,9 @@ INSERT INTO DienThoai (TenDT, MaDongDT, Hinh, DonGia, GiaKM) VALUES
 ('Nokia 6', 'NOK', 'nokia6.png', 5590000, 0),
 ('Nokia 8', 'NOK', 'nokia8.png', 12990000, 0),
 ('Nokia N150', 'NOK', 'n150.png', 649000, 0),
-('Oppo F3 Plus', 'OPP', 'oppof3+.jpg', 10690000, 0),
+('Oppo F3 Plus', 'OPP', 'oppo_f3_plus.jpg', 10690000, 0),
 ('Oppo F1s 2017 (64GB)', 'OPP', 'oppof1s2017.jpg', 5990000, 0),
-('Oppo F1 Plus', 'OPP', 'oppof1+.jpg', 6490000, 0),
+('Oppo F1 Plus', 'OPP', 'oppo_f1_plus.jpg', 6490000, 0),
 ('Oppo F3 Lite (A57)', 'OPP', 'oppof3lite.jpg', 5490000, 0),
 ('Samsung Galaxy S8', 'SAM', 'samsunggalaxys8.png', 18490000, 0),
 ('Samsung Galaxy J7 Pro', 'SAM', 'samgalaJ7-pro.png', 6990000, 0),

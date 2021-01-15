@@ -14,7 +14,8 @@ namespace DoAn.Areas.Admin.Models
         public string MatKhau { get; set; }
         [Range(0, 1)]
         public int LoaiTK{ get; set; }
-        
+        public ICollection<HoaDonModel> listHoaDon { get; set; }
+
 
     }
 }

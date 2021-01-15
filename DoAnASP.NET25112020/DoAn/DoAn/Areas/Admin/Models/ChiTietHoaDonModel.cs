@@ -13,12 +13,14 @@ namespace DoAn.Areas.Admin.Models
         public int ID { get; set; }
         public string MaHoaDon { get; set; }
         [ForeignKey("MaHoaDon")]
-        public string IDDienThoai { get; set; }
+        public virtual HoaDonModel HoaDon { get; set; }
+        public int IDDienThoai { get; set; }
         [ForeignKey("IDDienThoai")]
+        public virtual DienThoaiModel DienThoai { get; set; }
         public int SoLuong { get; set; }
         public float DonGia { get; set; }
         public float GiaKhuyenMai { get; set; }
-        public virtual HoaDonModel HoaDon { get; set; }
-        public virtual DienThoaiModel DienThoai { get; set; }
+        
+        
     }
 }

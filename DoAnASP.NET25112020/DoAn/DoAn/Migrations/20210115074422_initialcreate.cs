@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DoAn.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialcreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,20 +17,6 @@ namespace DoAn.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DongDienThoai", x => x.MaDT);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HoaDon",
-                columns: table => new
-                {
-                    MaHD = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    MaTK = table.Column<int>(type: "int", nullable: false),
-                    NgayLapHD = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TongTien = table.Column<float>(type: "real", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HoaDon", x => x.MaHD);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,59 +56,79 @@ namespace DoAn.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HoaDon",
+                columns: table => new
+                {
+                    MaHD = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    MaTK = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    NgayLapHD = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TongTien = table.Column<float>(type: "real", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HoaDon", x => x.MaHD);
+                    table.ForeignKey(
+                        name: "FK_HoaDon_TaiKhoan_MaTK",
+                        column: x => x.MaTK,
+                        principalTable: "TaiKhoan",
+                        principalColumn: "TenTK",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ChiTietHoaDon",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MaHoaDon = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IDDienThoai = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MaHoaDon = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    IDDienThoai = table.Column<int>(type: "int", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     DonGia = table.Column<float>(type: "real", nullable: false),
-                    GiaKhuyenMai = table.Column<float>(type: "real", nullable: false),
-                    HoaDonMaHD = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    DienThoaiID = table.Column<int>(type: "int", nullable: true)
+                    GiaKhuyenMai = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ChiTietHoaDon", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_ChiTietHoaDon_DienThoai_DienThoaiID",
-                        column: x => x.DienThoaiID,
+                        name: "FK_ChiTietHoaDon_DienThoai_IDDienThoai",
+                        column: x => x.IDDienThoai,
                         principalTable: "DienThoai",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ChiTietHoaDon_HoaDon_HoaDonMaHD",
-                        column: x => x.HoaDonMaHD,
+                        name: "FK_ChiTietHoaDon_HoaDon_MaHoaDon",
+                        column: x => x.MaHoaDon,
                         principalTable: "HoaDon",
                         principalColumn: "MaHD",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ChiTietHoaDon_DienThoaiID",
+                name: "IX_ChiTietHoaDon_IDDienThoai",
                 table: "ChiTietHoaDon",
-                column: "DienThoaiID");
+                column: "IDDienThoai");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ChiTietHoaDon_HoaDonMaHD",
+                name: "IX_ChiTietHoaDon_MaHoaDon",
                 table: "ChiTietHoaDon",
-                column: "HoaDonMaHD");
+                column: "MaHoaDon");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DienThoai_MaDongDT",
                 table: "DienThoai",
                 column: "MaDongDT");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HoaDon_MaTK",
+                table: "HoaDon",
+                column: "MaTK");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "ChiTietHoaDon");
-
-            migrationBuilder.DropTable(
-                name: "TaiKhoan");
 
             migrationBuilder.DropTable(
                 name: "DienThoai");
@@ -132,6 +138,9 @@ namespace DoAn.Migrations
 
             migrationBuilder.DropTable(
                 name: "DongDienThoai");
+
+            migrationBuilder.DropTable(
+                name: "TaiKhoan");
         }
     }
 }
